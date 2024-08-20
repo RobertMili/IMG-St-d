@@ -55,6 +55,42 @@
   .footer-link-wrapper {
     display: flex;
   }
+
+  .input-group-field,
+  textarea {
+      border-radius: 15px; /* Rounded corners */
+      padding: 10px; /* Add padding for better appearance */
+      border: 1px solid #ccc; /* Add border for better visibility */
+      width: 100%; /* Make the input fields full width */
+      box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+      margin-bottom: 5px; /* Add space between fields */
+  }
+  
+  .btn {
+    border-radius: 15px;
+  }
+
+  .footer-link-contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    width: 200px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+  
+  }
+  .footer-link-contact-form > h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    margin-bottom: 0rem;
+  }
+
+  .footer-link-contact-form a {
+    color: #fff;
+    margin-bottom: 16px;
+  }
   
   .footer-link-items {
     display: flex;
@@ -85,9 +121,6 @@
     transition: 0.3s ease-out;
   }
   
-  .footer-email-form h2 {
-    margin-bottom: 2rem;
-  }
   
   .footer-input::placeholder {
     color: #b1b1b1;
@@ -146,9 +179,21 @@
       width: 100%;
     }
   
-    .btn {
-      width: 100%;
+  
+
+    .custom-button {
+      background-color: transparent
+      color(#fff);
+      padding: 8px 90px;
+      border: 1px solid var(--primary-color);
+      transition: all 0.3s ease-out;
     }
+    
+    .custom-button:hover {
+      background-color: #242424; /* Background color on hover */
+      color: #fff; /* Text color on hover */
+    }
+
   
     .footer-link-wrapper {
       flex-direction: column;

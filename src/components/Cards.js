@@ -5,10 +5,10 @@ import CardItem from "./CardItem";
 function Cards() {
   return (
     <div className="cards">
-      <h1>Check about Carl-Joar Karlsson : </h1>
+    <h1>Discover the Life of Carl-Joar Karlsson</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
-         <ul className="cards__items">
+          <ul className="cards__items">
             <CardItem
               src="images/img-biography.jpg"
               text="Biography of the Carl-Joar Karlsson"
@@ -20,8 +20,8 @@ function Cards() {
               text="Latest news of Carl-Joar Karlsson..."
               label="News"
               path="/services"
-            />
-             <CardItem
+            />  
+            <CardItem
               src="images/img-calender.jpg"
               text="Arrage a Carl-Joar Karlsson's event"
               label="Arrage"
@@ -30,21 +30,21 @@ function Cards() {
           </ul>
           <ul className="cards__items">
             <CardItem
-              src="images/img-3.jpg"
-              text="Set Sail in the Atlantic Ocean visiting Uncharted Waters"
-              label="Mystery"
+              src="images/img-early-life.jpg"
+              text="Early Life of Carl-Joar Karlsson on this earth...."
+              label="Early Life"
               path="/services"
             />
             <CardItem
-              src="images/img-4.jpg"
-              text="Experience Football on Top of the Himilayan Mountains"
-              label="Adventure"
+              src="images/img-achievements.jpg"
+              text="Career Achievements of Carl-Joar Karlsson......."
+              label="Achievements"
               path="/products"
             />
             <CardItem
-              src="images/img-8.jpg"
-              text="Ride through the Sahara Desert on a guided camel tour"
-              label="Adrenaline"
+              src="images/img-awards.jpg"
+              text="Awards and Recognitions of Carl-Joar Karlsson"
+              label="Awards"
               path="/sign-up"
             />
           </ul>
