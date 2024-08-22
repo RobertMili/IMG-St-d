@@ -23,7 +23,7 @@ function Cards() {
             />  
             <CardItem
               src="images/img-blog4.jpg"
-              text="Arrage a Carl-Joar Karlsson's event"
+              text="Blog posts by Carl-Joar Karlsson...."
               label="Blog"
               path="/blog"
             />
