@@ -5,6 +5,11 @@
 
 h1 {
   text-align: center;
+  margin-top: 50px;
+}
+
+.cards__items > li {
+  margin: 3px; /* Add margin to each card item */
 }
 
 .cards__container {
@@ -23,6 +28,7 @@ h1 {
 
 .cards__items {
   margin-bottom: 24px;
+  margin-top: 50px;
   
 }
 

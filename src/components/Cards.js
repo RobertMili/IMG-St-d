@@ -5,7 +5,7 @@ import CardItem from "./CardItem";
 function Cards() {
   return (
     <div className="cards">
-    <h1>Discover the Life of Carl-Joar Karlsson</h1>
+    <h1>Carl-Joar Karlsson - Musician, Guitarist, Guitar-Tech</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
@@ -22,30 +22,10 @@ function Cards() {
               path="/services"
             />  
             <CardItem
-              src="images/img-calender.jpg"
+              src="images/img-blog4.jpg"
               text="Arrage a Carl-Joar Karlsson's event"
-              label="Arrage"
-              path="/services"
-            />
-          </ul>
-          <ul className="cards__items">
-            <CardItem
-              src="images/img-early-life.jpg"
-              text="Early Life of Carl-Joar Karlsson on this earth...."
-              label="Early Life"
-              path="/services"
-            />
-            <CardItem
-              src="images/img-achievements.jpg"
-              text="Career Achievements of Carl-Joar Karlsson......."
-              label="Achievements"
-              path="/products"
-            />
-            <CardItem
-              src="images/img-awards.jpg"
-              text="Awards and Recognitions of Carl-Joar Karlsson"
-              label="Awards"
-              path="/sign-up"
+              label="Blog"
+              path="/blog"
             />
           </ul>
         </div>
