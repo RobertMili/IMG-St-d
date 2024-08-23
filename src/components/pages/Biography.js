@@ -14,6 +14,9 @@ export default function Biography() {
           isVideo={true}
           width="100%"
           height="100%"
+          textSize="3em"
+          textPosition="top"
+          textAlignHorizontal="left"
         />
         <h1>
           <span className="fly-in">Biography of Carl-Joar Karlsson</span>

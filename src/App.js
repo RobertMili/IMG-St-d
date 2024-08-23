@@ -9,6 +9,7 @@ import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
 import Biography from "./components/pages/Biography";
 import News from "./components/pages/News";
+import Blog from "./components/pages/Blog";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/news" element={<News />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
       </Router>

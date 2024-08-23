@@ -13,8 +13,8 @@
 
 .fly-in-text {
     position: absolute;
-    top: 20%;
-    left: 20%;
+    top: var(--text-top, 50%);
+    left: var(--text-left, 50%);
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure text is above media */
     animation: flyIn 2s ease-out; /* Apply the animation */
@@ -25,11 +25,11 @@
 /* Add keyframes for the flying animation */
 @keyframes flyIn {
     0% {
-        transform: translateX(-100%);
+        transform: translate(-50%, -50%) translateX(-100%);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        transform: translate(-50%, -50%) translateX(0);
         opacity: 1;
     }
 }

@@ -66,6 +66,9 @@ const News = () => {
           isVideo={false}
           height={400}
           width="100%"
+          textSize="3em"
+          textPosition="center"
+          textAlignHorizontal="left"
         />
       </div>
       <div className="news-content">

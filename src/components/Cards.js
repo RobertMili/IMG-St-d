@@ -19,7 +19,7 @@ function Cards() {
               src="images/img-news.jpg"
               text="Latest news of Carl-Joar Karlsson..."
               label="News"
-              path="/services"
+              path="/news"
             />  
             <CardItem
               src="images/img-blog4.jpg"
