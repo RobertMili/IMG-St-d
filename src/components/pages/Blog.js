@@ -61,7 +61,7 @@ const Blog = () => {
       <div>
         <VideoWithFlyInText
           mediaSrc="images/img-blog4.jpg"
-          text="Welcome to Our Blog"
+          text="Welcome to Our Blog:"
           isVideo={false}
           height={500}
           width="100%"

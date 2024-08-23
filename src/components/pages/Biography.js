@@ -15,9 +15,10 @@ export default function Biography() {
           width="100%"
           height="100%"
           textSize="3em"
-          textPosition="top"
-          textAlignHorizontal="left"
+            textPosition="top"
+    textAlignHorizontal="left"
         />
+        <div className="biography-content">
         <h1>
           <span className="fly-in">Biography of Carl-Joar Karlsson</span>
         </h1>
@@ -49,6 +50,7 @@ export default function Biography() {
           stage performing or behind the scenes working on guitars, Carl-Joar's
           love for music shines through in everything he does.
         </p>
+      </div>
       </div>
       <Cards />
     </>

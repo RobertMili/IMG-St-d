@@ -7,8 +7,8 @@ const MediaWithFlyInText = ({ mediaSrc, text, isVideo, width, height, textColor 
     color: textColor,
     fontSize: textSize,
     '--text-top': textPosition === 'top' ? '10%' : textPosition === 'bottom' ? '90%' : '60%',
-    '--text-left': textAlignHorizontal === 'left' ? '20%' : textAlignHorizontal === 'right' ? '90%' : '50%',
-    transform: 'translate(-50%, -50%)',
+    '--text-left': textAlignHorizontal === 'left' ? (window.innerWidth <= 768 ? '36%' : '19%') : textAlignHorizontal === 'right' ? '90%' : '50%',
+transform: 'translate(-50%, -50%)',
   };
 
   return (
