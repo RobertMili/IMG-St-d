@@ -13,7 +13,7 @@ function Cards() {
               src="images/img-biography.jpg"
               text="Biography of the Carl-Joar Karlsson"
               label="Biography"
-              path="/services"
+              path="/biography"
             />
             <CardItem
               src="images/img-news.jpg"
