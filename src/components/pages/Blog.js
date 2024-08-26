@@ -7,7 +7,17 @@ const Blog = ({ isAdmin }) => {
   const [expanded, setExpanded] = useState({});
   const [blogItems, setBlogItems] = useState([
     {
-      title: "Living Sustainably",
+      title: "Exploring the Wonders of the Universe",
+      content:
+        "The universe is vast and full of mysteries waiting to be uncovered. From the formation of galaxies to the behavior of black holes, scientists are constantly making new discoveries that challenge our understanding of the cosmos. Join us as we delve into the latest findings and explore the wonders of the universe.",
+    },
+    {
+      title: "The Future of Artificial Intelligence",
+      content:
+        "Artificial Intelligence (AI) is rapidly transforming various industries, from healthcare to finance. With advancements in machine learning and neural networks, AI systems are becoming more sophisticated and capable. In this blog post, we discuss the potential future applications of AI and the ethical considerations that come with it.",
+    },
+    {
+      title: "Sustainable Living: Tips and Tricks",
       content:
         "Living sustainably is more important than ever as we face the challenges of climate change. In this post, we share practical tips and tricks for reducing your carbon footprint, conserving resources, and living a more eco-friendly lifestyle. From simple changes in your daily routine to larger lifestyle adjustments, every effort counts.",
     },
