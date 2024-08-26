@@ -3,7 +3,7 @@ import "./News.css";
 import VideoWithFlyInText from "../VideoWithFlyInText";
 import { Button } from "../Button";
 
-const NewsItem = ({ item, index, expanded, toggleContentVisibility }) => (
+const NewsItem = ({ item, index, expanded, toggleContentVisibility, handleEdit, handleRemove, isAdmin }) => (
   <article className="news-item">
     <h4>{item.title}</h4>
     <p className={expanded[index] ? "expanded" : "collapsed"}>
@@ -16,20 +16,30 @@ const NewsItem = ({ item, index, expanded, toggleContentVisibility }) => (
     >
       {expanded[index] ? "Read Less" : "Read More"}
     </Button>
+    {isAdmin && (
+      <>
+        <Button
+          onClick={() => handleEdit(index)}
+          buttonStyle="btn--outline"
+          buttonSize="btn--small"
+        >
+          Edit
+        </Button>
+        <Button
+          onClick={() => handleRemove(index)}
+          buttonStyle="btn--outline"
+          buttonSize="btn--small"
+        >
+          Remove
+        </Button>
+      </>
+    )}
   </article>
 );
 
 const News = () => {
   const [expanded, setExpanded] = useState({});
-
-  const toggleContentVisibility = (index) => {
-    setExpanded((prevState) => ({
-      ...prevState,
-      [index]: !prevState[index],
-    }));
-  };
-
-  const newsItems = [
+  const [newsItems, setNewsItems] = useState([
     {
       title: "Global Markets React to Economic Data",
       content:
@@ -55,7 +65,54 @@ const News = () => {
       content:
         "Europe is currently experiencing a record-breaking heatwave, with temperatures soaring above 40°C in several countries. Authorities have issued health warnings and are advising residents to stay indoors and stay hydrated.",
     },
-  ];
+  ]);
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentPostIndex, setCurrentPostIndex] = useState(null);
+  const [editContent, setEditContent] = useState({ title: "", content: "" });
+  const [newPost, setNewPost] = useState({ title: "", content: "" });
+  const [isAdmin, setIsAdmin] = useState(false); 
+
+  const toggleContentVisibility = (index) => {
+    setExpanded((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
+
+  const handleEdit = (index) => {
+    setIsEditing(true);
+    setCurrentPostIndex(index);
+    setEditContent(newsItems[index]);
+  };
+
+  const handleRemove = (index) => {
+    const updatedPosts = newsItems.filter((_, i) => i !== index);
+    setNewsItems(updatedPosts);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    if (isEditing) {
+      setEditContent({ ...editContent, [name]: value });
+    } else {
+      setNewPost({ ...newPost, [name]: value });
+    }
+  };
+
+  const handleUpdatePost = () => {
+    const updatedPosts = newsItems.map((post, index) =>
+      index === currentPostIndex ? editContent : post
+    );
+    setNewsItems(updatedPosts);
+    setIsEditing(false);
+    setEditContent({ title: "", content: "" });
+    setCurrentPostIndex(null);
+  };
+
+  const handleAddPost = () => {
+    setNewsItems([newPost, ...newsItems]);
+    setNewPost({ title: "", content: "" });
+  };
 
   return (
     <>
@@ -80,9 +137,57 @@ const News = () => {
             index={index}
             expanded={expanded}
             toggleContentVisibility={toggleContentVisibility}
+            handleEdit={handleEdit}
+            handleRemove={handleRemove}
+            isAdmin={isAdmin}
           />
         ))}
       </div>
+      {isAdmin && (
+        <>
+          {isEditing ? (
+            <div className="edit-form">
+              <h2>Edit News</h2>
+              <input
+                type="text"
+                name="title"
+                value={editContent.title}
+                onChange={handleInputChange}
+                placeholder="Title"
+              />
+              <textarea
+                name="content"
+                value={editContent.content}
+                onChange={handleInputChange}
+                placeholder="Content"
+              />
+              <Button onClick={handleUpdatePost} buttonStyle="btn--primary" buttonSize="btn--medium">
+                Update News
+              </Button>
+            </div>
+          ) : (
+            <div className="edit-form">
+              <h2>Add New News</h2>
+              <input
+                type="text"
+                name="title"
+                value={newPost.title}
+                onChange={handleInputChange}
+                placeholder="Title"
+              />
+              <textarea
+                name="content"
+                value={newPost.content}
+                onChange={handleInputChange}
+                placeholder="Content"
+              />
+              <Button onClick={handleAddPost} buttonStyle="btn--primary" buttonSize="btn--medium">
+                Add News
+              </Button>
+            </div>
+          )}
+        </>
+      )}
     </>
   );
 };
