@@ -27,7 +27,7 @@ export default function Biography() {
           known for his exceptional talent and dedication to the art of music.
           Born and raised in a small town, Carl-Joar discovered his passion for
           music at a young age. He began playing the guitar when he was just
-          eight years old and quickly developed a deep love for the instrument.
+          eight years old and quickly developed a deep love for the instrument.  
         </p>
         <p>
           Over the years, Carl-Joar honed his skills and became proficient in
