@@ -1,5 +1,5 @@
 .cards {
-  padding: 4rem;
+  padding: 2rem 1rem; /* Adjust padding for smaller screens */
   background: #fff;
 }
 
@@ -29,7 +29,6 @@ h1 {
 .cards__items {
   margin-bottom: 24px;
   margin-top: 50px;
-  
 }
 
 .cards__item {
@@ -37,7 +36,7 @@ h1 {
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .cards__item__link {
@@ -91,7 +90,6 @@ h1 {
   max-height: 100%;
   object-fit: cover;
   transition: all 0.2s linear;
-
 }
 
 .cards__item__img:hover {
@@ -123,5 +121,31 @@ h1 {
 @media only screen and (max-width: 1024px) {
   .cards__item {
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cards {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .cards__items {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+
+  .cards__item {
+    margin: 1rem 0; /* Adjust margin for better spacing */
+    width: 100%; /* Ensure cards take full width */
+  }
+
+  .cards__item__info {
+    padding: 15px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .cards__item__text {
+    font-size: 16px; /* Adjust font size for readability */
+    line-height: 22px;
   }
 }
