@@ -37,7 +37,7 @@ const NewsItem = ({ item, index, expanded, toggleContentVisibility, handleEdit, 
   </article>
 );
 
-const News = () => {
+const News = ({ isAdmin }) => {
   const [expanded, setExpanded] = useState({});
   const [newsItems, setNewsItems] = useState([
     {
@@ -70,7 +70,6 @@ const News = () => {
   const [currentPostIndex, setCurrentPostIndex] = useState(null);
   const [editContent, setEditContent] = useState({ title: "", content: "" });
   const [newPost, setNewPost] = useState({ title: "", content: "" });
-  const [isAdmin, setIsAdmin] = useState(false); 
 
   const toggleContentVisibility = (index) => {
     setExpanded((prevState) => ({
