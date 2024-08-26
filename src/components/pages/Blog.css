@@ -42,8 +42,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 10px 0; /* Adjust margins for better spacing */
   padding: 15px;
   border: 1px solid rgb(1, 1, 10);
   border-radius: 10px;
@@ -70,8 +69,45 @@
 button {
   cursor: pointer;
   transition: background-color 0.3s ease;
+  padding: 10px 15px; /* Add padding for better touch targets */
+  font-size: 1rem; /* Ensure font size is readable */
+  width: auto; /* Ensure the button width is auto */
+  margin: 10px auto; /* Center the button and add vertical margin */
+  display: block; /* Make the button a block element */
 }
 
 button:hover {
   background-color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .blog-post {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .blog-post-title {
+    font-size: 2rem; /* Adjust font size for readability */
+  }
+
+  .blog-content {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .blog-item {
+    margin: 10px 0; /* Adjust margins for better spacing */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  button {
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+    font-size: 0.9rem; /* Adjust font size for readability */
+    width: auto; /* Ensure the button width is auto */
+    margin: 10px auto; /* Center the button and add vertical margin */
+    display: block; /* Make the button a block element */
+  }
 }

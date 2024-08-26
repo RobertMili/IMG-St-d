@@ -8,22 +8,27 @@
 
 /* Footer styles */
 .footer-container {
-  background-color: #242424;
+  background-color: var(--footer-bg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: var(--footer-color);
+  padding: 2rem 1rem; /* Add padding for better spacing */
 }
+
 .footer-links {
   width: 100%;
   max-width: 1000px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .footer-link-wrapper {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center; /* Center items on smaller screens */
 }
 
 .footer-link-items {
@@ -80,6 +85,7 @@ textarea:focus {
 
   .footer-link-wrapper {
     flex-direction: column;
+    align-items: center; /* Center items on smaller screens */
   }
 
   .footer-input {
@@ -114,7 +120,7 @@ html, body {
 }
 
 .news-image {
-  width: 30%;
+  width: 100%; /* Make images take full width on smaller screens */
   height: auto;
   max-width: 600px; /* Set a maximum width */
   max-height: 400px; /* Set a maximum height */
@@ -127,6 +133,20 @@ html, body {
   .news-image {
     max-width: 100%; /* Adjust the max-width for smaller screens */
     max-height: 300px; /* Adjust the max-height for smaller screens */
+  }
+
+  .footer-link-items {
+    width: 100%; /* Make footer link items take full width */
+    text-align: center; /* Center text on smaller screens */
+    margin: 8px 0; /* Adjust margin for better spacing */
+  }
+
+  .footer-link-items h2 {
+    font-size: 1.2rem; /* Adjust font size for readability */
+  }
+
+  .footer-link-items a {
+    font-size: 1rem; /* Adjust font size for readability */
   }
 }
 
