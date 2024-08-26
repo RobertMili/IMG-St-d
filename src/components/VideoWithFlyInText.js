@@ -6,9 +6,9 @@ const MediaWithFlyInText = ({ mediaSrc, text, isVideo, width, height, textColor 
   const textStyle = {
     color: textColor,
     fontSize: textSize,
-    '--text-top': textPosition === 'top' ? '10%' : textPosition === 'bottom' ? '90%' : '60%',
-    '--text-left': textAlignHorizontal === 'left' ? (window.innerWidth <= 768 ? '35%' : '19%') : textAlignHorizontal === 'right' ? '90%' : '50%',
-transform: 'translate(-50%, -70%)',
+    '--text-top': textPosition === 'top' ? '10%' : textPosition === 'bottom' ? '90%' : '55%',
+    '--text-left': textAlignHorizontal === 'left' ? (window.innerWidth <= 768 ? '35%' : '15%') : textAlignHorizontal === 'right' ? '90%' : '50%',
+transform: 'translate(-50%, -50%)',
   };
 
   return (
