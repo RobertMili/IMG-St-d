@@ -1,7 +1,7 @@
 .media-container {
     position: relative;
-    width: 100%; /* Default width */
-    height: auto; /* Default height */
+    width: 100%; 
+    height: auto; 
 }
 
 .hero-media {
