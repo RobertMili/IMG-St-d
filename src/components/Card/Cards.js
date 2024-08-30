@@ -1,11 +1,11 @@
 import React from "react";
 import "./Cards.css";
-import CardItem from "./CardItem";
+import CardItem from "../CardItem/CardItem";
 
 function Cards() {
   return (
     <div className="cards">
-    <h1>Carl-Joar Karlsson - Musician, Guitarist, Guitar-Tech</h1>
+      <h1>Carl-Joar Karlsson - Musician, Guitarist, Guitar-Tech</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
@@ -20,7 +20,7 @@ function Cards() {
               text="Latest news of Carl-Joar Karlsson..."
               label="News"
               path="/news"
-            />  
+            />
             <CardItem
               src="images/img-blog4.jpg"
               text="Blog posts by Carl-Joar Karlsson...."

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Blog.css";
-import VideoWithFlyInText from "../VideoWithFlyInText";
-import { Button } from "../Button";
+import VideoWithFlyInText from "../../VideoWithFlyingInText/VideoWithFlyInText";
+import { Button } from "../../Button/Button";
 
-const Blog = ({ isAdmin }) => { 
+const Blog = ({ isAdmin }) => {
   const [expanded, setExpanded] = useState({});
   const [blogItems, setBlogItems] = useState([
     {
@@ -98,7 +98,9 @@ const Blog = ({ isAdmin }) => {
         {blogItems.map((item, index) => (
           <article key={index} className="blog-item">
             <h4 className="blog-post-title">{item.title}</h4>
-            <p className={expanded[index] ? "expanded" : "collapsed"}>{item.content}</p>
+            <p className={expanded[index] ? "expanded" : "collapsed"}>
+              {item.content}
+            </p>
             <Button
               onClick={() => toggleContentVisibility(index)}
               buttonStyle="btn--outline"
@@ -146,7 +148,11 @@ const Blog = ({ isAdmin }) => {
                 onChange={handleInputChange}
                 placeholder="Content"
               />
-              <Button onClick={handleUpdatePost} buttonStyle="btn--primary" buttonSize="btn--medium">
+              <Button
+                onClick={handleUpdatePost}
+                buttonStyle="btn--primary"
+                buttonSize="btn--medium"
+              >
                 Update Post
               </Button>
             </div>
@@ -166,7 +172,11 @@ const Blog = ({ isAdmin }) => {
                 onChange={handleInputChange}
                 placeholder="Content"
               />
-              <Button onClick={handleAddPost} buttonStyle="btn--primary" buttonSize="btn--medium">
+              <Button
+                onClick={handleAddPost}
+                buttonStyle="btn--primary"
+                buttonSize="btn--medium"
+              >
                 Add Post
               </Button>
             </div>

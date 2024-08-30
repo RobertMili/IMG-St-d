@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import "./News.css";
-import VideoWithFlyInText from "../VideoWithFlyInText";
-import { Button } from "../Button";
+import VideoWithFlyInText from "../../VideoWithFlyingInText/VideoWithFlyInText";
+import { Button } from "../../Button/Button";
 
-const NewsItem = ({ item, index, expanded, toggleContentVisibility, handleEdit, handleRemove, isAdmin }) => (
+const NewsItem = ({
+  item,
+  index,
+  expanded,
+  toggleContentVisibility,
+  handleEdit,
+  handleRemove,
+  isAdmin,
+}) => (
   <article className="news-item">
     <h4>{item.title}</h4>
-    <p className={expanded[index] ? "expanded" : "collapsed"}>
-      {item.content}
-    </p>
+    <p className={expanded[index] ? "expanded" : "collapsed"}>{item.content}</p>
     <Button
       onClick={() => toggleContentVisibility(index)}
       buttonStyle="btn--outline"
@@ -160,7 +166,11 @@ const News = ({ isAdmin }) => {
                 onChange={handleInputChange}
                 placeholder="Content"
               />
-              <Button onClick={handleUpdatePost} buttonStyle="btn--primary" buttonSize="btn--medium">
+              <Button
+                onClick={handleUpdatePost}
+                buttonStyle="btn--primary"
+                buttonSize="btn--medium"
+              >
                 Update News
               </Button>
             </div>
@@ -180,7 +190,11 @@ const News = ({ isAdmin }) => {
                 onChange={handleInputChange}
                 placeholder="Content"
               />
-              <Button onClick={handleAddPost} buttonStyle="btn--primary" buttonSize="btn--medium">
+              <Button
+                onClick={handleAddPost}
+                buttonStyle="btn--primary"
+                buttonSize="btn--medium"
+              >
                 Add News
               </Button>
             </div>

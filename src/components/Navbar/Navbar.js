@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Button } from "./Button";
+import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -43,7 +43,11 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/biography" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/biography"
+              className="nav-links"
+              onClick={closeMobileMenu}
+            >
               Biography
             </Link>
           </li>

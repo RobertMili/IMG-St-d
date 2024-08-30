@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home";
 import Services from "./components/pages/Services";
 import Products from "./components/pages/Products";
 import SignUp from "./components/pages/SignUp";
-import Biography from "./components/pages/Biography";
-import News from "./components/pages/News";
-import Blog from "./components/pages/Blog";
-import Admin from "./components/pages/Admin";
+import Biography from "./components/pages/Biography/Biography"
+import News from "./components/pages/News/News";
+import Blog from "./components/pages/Blog/Blog";
+import Admin from "./components/pages/Admin/Admin";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);

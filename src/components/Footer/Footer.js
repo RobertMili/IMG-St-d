@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "./Button"; // Ensure Button component is correctly imported
+import { Button } from "../Button/Button"; // Ensure Button component is correctly imported
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import emailjs from "emailjs-com"; // Ensure emailjs is imported
@@ -62,7 +62,6 @@ function Footer() {
           <div className="footer-link-items">
             <h2>Social Media: </h2>
             <Link to="/">
-              
               <FontAwesomeIcon icon={faInstagram} size="2x" />
               <span> Instagram</span>
             </Link>
