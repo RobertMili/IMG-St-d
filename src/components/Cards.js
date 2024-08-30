@@ -25,7 +25,7 @@ function Cards() {
               src="images/img-blog4.jpg"
               text="Blog posts by Carl-Joar Karlsson...."
               label="Blog"
-              path="/admin"
+              path="/blog"
             />
           </ul>
         </div>
