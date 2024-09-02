@@ -55,6 +55,7 @@
 
 .nav-item {
   height: var(--navbar-height);
+  margin-bottom: 1rem;
 }
 
 .nav-links {
