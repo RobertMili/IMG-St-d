@@ -19,7 +19,7 @@
     z-index: 1; /* Ensure text is above media */
     animation: flyIn 2s ease-out; /* Apply the animation */
     color: rgb(243, 241, 241); /* Ensure text is visible over the media */
-    font-size: 2em; /* Adjust this value to make the text bigger */
+    font-size: 2rem; /* Adjust this value to make the text bigger */
 }
 
 /* Add keyframes for the flying animation */

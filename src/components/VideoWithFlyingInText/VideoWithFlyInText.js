@@ -9,7 +9,7 @@ const MediaWithFlyInText = ({
   width,
   height,
   textColor = "white",
-  textSize = "2em",
+  textSize = "2rem",
   textPosition = "center",
   textAlignHorizontal = "center",
 }) => {

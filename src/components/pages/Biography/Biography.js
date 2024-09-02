@@ -14,7 +14,7 @@ export default function Biography() {
           isVideo={true}
           width="100%"
           height="100%"
-          textSize="3em"
+          textSize="3rem"
           textPosition="top"
           textAlignHorizontal="left"
         />

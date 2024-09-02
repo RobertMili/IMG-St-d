@@ -29,13 +29,13 @@
     z-index: 1; /* Ensure text is above video */
     animation: flyIn 2s ease-out; /* Apply the animation */
     color: rgb(243, 241, 241); /* Ensure text is visible over the video */
-    font-size: 5em;
+    font-size: 5rem;
 }
 
 /* Style the heading */
 .biography h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     color: #222;
     animation: flyIn s ease-out; /* Apply the animation */
 }
@@ -51,8 +51,8 @@
 
 /* Style the heading */
 .biography h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     color: #222;
 }
 
@@ -65,12 +65,12 @@
 
 /* Add spacing between paragraphs */
 .biography p {
-    margin-bottom: 1em; 
+    margin-bottom: 1rem; 
     font-size: 1.1875rem;
     line-height: 1.6;
     font-family: 'Lato', sans-serif;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 2rem;
+    margin-right: 2rem;
     background-color: #f9f9f9
 }
 

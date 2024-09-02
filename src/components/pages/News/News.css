@@ -20,7 +20,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-height: 2.4em; /* Adjust based on the number of lines you want to show */
+  max-height: 2.4rem; /* Adjust based on the number of lines you want to show */
 }
 
 .expanded {

@@ -128,7 +128,7 @@ const News = ({ isAdmin }) => {
           isVideo={false}
           height={400}
           width="100%"
-          textSize="3em"
+          textSize="3rem"
           textPosition="center"
           textAlignHorizontal="left"
         />

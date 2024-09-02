@@ -89,7 +89,7 @@ const Blog = ({ isAdmin }) => {
           height={500}
           width="100%"
           textColor="black"
-          textSize="3em"
+          textSize="3rem"
           textPosition="bottom"
           textAlignHorizontal="left"
         />
