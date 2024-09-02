@@ -34,6 +34,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .fly-in-text {
+        --text-left:20%;
+    }
+  }
+  
+
 .hero-media {
     object-fit: cover; /* Ensure the image covers the container without stretching */
     max-width: 100%; /* Ensure the image does not exceed the container's width */
