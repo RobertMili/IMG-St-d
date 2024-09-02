@@ -81,6 +81,7 @@ function Footer() {
           <div className="footer-link-items">
             <h2>Contact Form</h2>
             <form className="input-group" onSubmit={handleSubmit}>
+              <label htmlFor="email">Email:</label>
               <input
                 className="input-group-field"
                 type="email"
@@ -90,6 +91,7 @@ function Footer() {
                 onChange={handleChange} // Attach handleChange to input
                 required
               />
+              <label htmlFor="message">Message:</label>
               <textarea
                 name="message"
                 placeholder="Message"
