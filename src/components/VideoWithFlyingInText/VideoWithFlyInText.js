@@ -23,7 +23,7 @@ const MediaWithFlyInText = ({
         } else if (window.innerWidth <= 1100) {
           setTextLeft('31%');
         } else {
-          setTextLeft('19%');
+          setTextLeft('31%');
         }
       } else if (textAlignHorizontal === 'right') {
         setTextLeft('90%');

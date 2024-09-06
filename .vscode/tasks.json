@@ -8,6 +8,13 @@
       "problemMatcher": [],
       "label": "npm: build",
       "detail": "react-scripts build"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": [],
+      "label": "npm: start",
+      "detail": "react-scripts start"
     }
   ]
 }

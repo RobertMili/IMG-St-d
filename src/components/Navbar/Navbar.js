@@ -30,8 +30,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          Carl-Joar Karlsson
-          <i className="fab fa-typo3" />
+          Brf Stjärnbildsgatan&nbsp;
+          <i className=" fas fa-home"  />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -48,17 +48,12 @@ function Navbar() {
               className="nav-links"
               onClick={closeMobileMenu}
             >
-              Biography
+              BoendeInfo
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/news" className="nav-links" onClick={closeMobileMenu}>
-              News
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/blog" className="nav-links" onClick={closeMobileMenu}>
-              Blog
+              Kontakt
             </Link>
           </li>
         </ul>
