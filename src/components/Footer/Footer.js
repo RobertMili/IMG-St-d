@@ -76,40 +76,6 @@ function Footer() {
             </Link>
           </div>
         </div>
-
-        <div className="footer-link-wrapper">
-          <div className="footer-link-items">
-            <h2>Contact Form</h2>
-            <form className="input-group" onSubmit={handleSubmit}>
-              <label htmlFor="email">Email:</label>
-              <input
-                className="input-group-field"
-                type="email"
-                name="email"
-                placeholder="Email address"
-                value={formData.email}
-                onChange={handleChange} // Attach handleChange to input
-                required
-              />
-              <label htmlFor="message">Message:</label>
-              <textarea
-                name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange} // Attach handleChange to textarea
-                required
-              ></textarea>
-              <Button
-                buttonStyle="btn--primary"
-                buttonSize="btn--small"
-                type="submit"
-              >
-                Submit
-              </Button>{" "}
-              {/* Ensure Button component renders a native <button> element */}
-            </form>
-          </div>
-        </div>
       </div>
     </footer>
   );

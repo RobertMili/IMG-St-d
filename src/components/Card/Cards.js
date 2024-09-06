@@ -5,26 +5,46 @@ import CardItem from "../CardItem/CardItem";
 function Cards() {
   return (
     <div className="cards">
-      <h1>Carl-Joar Karlsson - Musician, Guitarist, Guitar-Tech</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
             <CardItem
-              src="images/img-biography.jpg"
+              src="images/item-trivselregles.jpg"
               text="Biography of the Carl-Joar Karlsson"
-              label="Biography"
+              label="Trivselregler"
               path="/biography"
             />
             <CardItem
-              src="images/img-news.jpg"
-              text="Latest news of Carl-Joar Karlsson..."
-              label="News"
+              src="images/img-garage.png"
+              text="Biography of the Carl-Joar Karlsson"
+              label="Garage"
+              path="/news"
+            />
+             <CardItem
+              src="images/img-el2.jpg"
+              text="Biography of the Carl-Joar Karlsson"
+              label="El & Varmvatten"
+              path="/blog"
+            />
+        
+          </ul>
+          <ul className="cards__items">
+            <CardItem
+              src="images/img-tv.jpg"
+              text="Biography of the Carl-Joar Karlsson"
+              label="TV & Internet"
+              path="/blog"
+            />
+              <CardItem
+              src="images/img-recycle.jpg"
+              text="Biography of the Carl-Joar Karlsson"
+              label="Soprum"
               path="/news"
             />
             <CardItem
-              src="images/img-blog4.jpg"
-              text="Blog posts by Carl-Joar Karlsson...."
-              label="Blog"
+              src="images/img-news.png"
+              text="Biography of the Carl-Joar Karlsson"
+              label="Nyheter"
               path="/blog"
             />
           </ul>
