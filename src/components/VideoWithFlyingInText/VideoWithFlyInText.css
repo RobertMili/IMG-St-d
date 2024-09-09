@@ -4,12 +4,29 @@
     height: auto; 
 }
 
-.hero-media {
+/* Define the fadeInLeft animation */
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .hero-media {
     width: 100%;
     height: 100%;
     z-index: -1; /* Ensure media is behind text */
     position: relative; /* Ensure proper stacking context */
-}
+    visibility: visible;
+    animation-name: fadeInLeft;
+    animation-duration: 1200ms;
+    animation-delay: 100ms;
+    animation-fill-mode: both; /* Ensures the element stays in the final state */
+  }
 
 .fly-in-text {
     position: absolute;
@@ -17,7 +34,7 @@
     left: var(--text-left, 50%);
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure text is above media */
-    animation: flyIn 2s ease-out; /* Apply the animation */
+    animation-name: fadeInLeft; /* Apply the animation */
     color: rgb(243, 241, 241); /* Ensure text is visible over the media */
     font-size: 2rem; /* Adjust this value to make the text bigger */
 }
