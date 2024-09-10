@@ -1,11 +1,44 @@
-.news-content {
+.blog {
+  padding: 2rem;
+}
+
+.blog ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.blog li:hover {
+  text-decoration: underline;
+}
+
+.blog-post {
+  padding: 2rem;
+}
+
+.blog-post button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.blog-post-title {
+  font-size: 2.6rem;
+  font-family: Lato, sans-serif;
+}
+
+.blog-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
 }
 
-.news-item {
+.blog-item {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -20,11 +53,17 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-height: 2.4rem; /* Adjust based on the number of lines you want to show */
+  max-height: 2.4rem;
+  font-family: 'Lato', sans-serif;
 }
 
 .expanded {
   white-space: normal;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.38rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  line-height: 1.6rem;
 }
 
 button {
@@ -32,6 +71,9 @@ button {
   transition: background-color 0.3s ease;
   padding: 10px 15px; /* Add padding for better touch targets */
   font-size: 1rem; /* Ensure font size is readable */
+  width: auto; /* Ensure the button width is auto */
+  margin: 10px auto; /* Center the button and add vertical margin */
+  display: block; /* Make the button a block element */
 }
 
 button:hover {
@@ -40,11 +82,23 @@ button:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .news-content {
+  .blog {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .blog-post {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .blog-post-title {
+    font-size: 2rem; /* Adjust font size for readability */
+  }
+
+  .blog-content {
     padding: 10px; /* Reduce padding for smaller screens */
   }
 
-  .news-item {
+  .blog-item {
     margin: 10px 0; /* Adjust margins for better spacing */
     padding: 10px; /* Adjust padding for smaller screens */
   }
@@ -52,6 +106,8 @@ button:hover {
   button {
     padding: 8px 12px; /* Adjust padding for smaller screens */
     font-size: 0.9rem; /* Adjust font size for readability */
+    width: auto; /* Ensure the button width is auto */
+    margin: 10px auto; /* Center the button and add vertical margin */
+    display: block; /* Make the button a block element */
   }
- 
 }

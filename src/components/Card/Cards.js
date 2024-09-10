@@ -42,7 +42,7 @@ function Cards() {
                 src="images/img-tv.jpg"
                 text="Trivselregler för Brf Stjärnbildsgatan"
                 label="TV & Internet"
-                path="/blog"
+                path="/tv"
               />
             </AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__bounceIn">
@@ -50,7 +50,7 @@ function Cards() {
                 src="images/img-recycle.jpg"
                 text="Trivselregler för Brf Stjärnbildsgatan"
                 label="Soprum"
-                path="/news"
+                path="/garbage"
               />
             </AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__bounceIn">
@@ -58,7 +58,7 @@ function Cards() {
                 src="images/img-news.png"
                 text="Trivselregler för Brf Stjärnbildsgatan"
                 label="Nyheter"
-                path="/blog"
+                path="/news"
               />
             </AnimationOnScroll>
           </ul>

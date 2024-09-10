@@ -1,75 +1,35 @@
 import React, { useState } from "react";
-import "./News.css";
+import "./Blog.css";
 import VideoWithFlyInText from "../../VideoWithFlyingInText/VideoWithFlyInText";
 import { Button } from "../../Button/Button";
 
-const NewsItem = ({
-  item,
-  index,
-  expanded,
-  toggleContentVisibility,
-  handleEdit,
-  handleRemove,
-  isAdmin,
-}) => (
-  <article className="news-item">
-    <h4>{item.title}</h4>
-    <p className={expanded[index] ? "expanded" : "collapsed"}>{item.content}</p>
-    <Button
-      onClick={() => toggleContentVisibility(index)}
-      buttonStyle="btn--outline"
-      buttonSize="btn--small"
-    >
-      {expanded[index] ? "Read Less" : "Read More"}
-    </Button>
-    {isAdmin && (
-      <>
-        <Button
-          onClick={() => handleEdit(index)}
-          buttonStyle="btn--outline"
-          buttonSize="btn--small"
-        >
-          Edit
-        </Button>
-        <Button
-          onClick={() => handleRemove(index)}
-          buttonStyle="btn--outline"
-          buttonSize="btn--small"
-        >
-          Remove
-        </Button>
-      </>
-    )}
-  </article>
-);
-
-const News = ({ isAdmin }) => {
+const Blog = ({ isAdmin }) => {
   const [expanded, setExpanded] = useState({});
-  const [newsItems, setNewsItems] = useState([
+  const [blogItems, setBlogItems] = useState([
     {
-      title: "Global Markets React to Economic Data",
+      title: "Välkommen till Brf Stjärnbildsgatan!",
       content:
-        "Global stock markets saw significant movements today as investors reacted to new economic data. Analysts predict further volatility in the coming days as more reports are released.<<<<<<<<<<<<<<>>>>>>>>>>>>Global stock markets saw significant movements today as investors reacted to new economic data. Analysts predict further volatility in the coming days as more reports are released.<<<<<<<<<<<<<<>>>>>>>>>>>>",
+        "Brf Stjärnbildshus nr 1 registrerades 1984 och innehåller nu 89 lägenheter med bostadsrätt. Fastigheterna började bebyggas 1967 som flervåningshus men gjordes om 1987 till bostadsrätter med radhuskaraktär och utgörs av fyra flerbostadshus med total lägenhetsyta på 8257 kvm.",
     },
     {
-      title: "Major Earthquake Strikes Pacific Region",
+      title: "Renoveringar och Förbättringar i Brf Stjärnbildsgatan",
       content:
-        "A 7.8 magnitude earthquake has struck the Pacific region, causing widespread damage and prompting tsunami warnings. Emergency services are currently assessing the situation and responding to those in need.",
+        "Brf Stjärnbildshus har genomfört flera renoveringar för att förbättra boendemiljön. 2011 byttes balkongdörrar och fönster till moderna 2-glas. 2013 utfördes värmejusteringar och våtrumsbesiktningar. 2014 byttes ventilationen ut och stammarna inspekterades. 2017 rustades lekplatserna upp och OVK genomfördes. 2018 lades taken om. Föreningen följer en underhållsplan som sträcker sig till 2043.",
     },
     {
-      title: "Technology Giant Unveils New Product Line",
+      title: "Ekonomisk Förvaltning och Avgifter",
       content:
-        "In a highly anticipated event, one of the world’s leading technology companies unveiled its latest product line today. The new devices boast cutting-edge features and are expected to hit the market next month.",
+        "Den ekonomiska förvaltningen sköts av SBC och föreningen har god ekonomi. Månadsavgiften inkluderar värme, vatten, grundutbud på kabel-TV, bredbandsuppkoppling, bostadsrättstillägg på hemförsäkringen och i de flesta fall även en garageplats. Inga planerade avgiftshöjningar för 2021 finns.",
     },
     {
-      title: "Political Tensions Rise in the Middle East",
+      title: "TV och Internet i Brf Stjärnbildsgatan",
       content:
-        "Political tensions in the Middle East are escalating as diplomatic talks have broken down between key nations. International observers are concerned about the potential for conflict if the situation continues to deteriorate.",
+        "Kabel-TV levereras via ComHem och grundutbudet av kanaler ingår i månadsavgiften. Även bredbandsuppkopplingen ingår i månadsavgiften och levereras via ComHem.",
     },
     {
-      title: "Record-Breaking Heatwave Sweeps Across Europe",
+      title: "Parkering och Gemensamma Utrymmen",
       content:
-        "Europe is currently experiencing a record-breaking heatwave, with temperatures soaring above 40°C in several countries. Authorities have issued health warnings and are advising residents to stay indoors and stay hydrated.",
+        "De flesta lägenheter har en garageplats. Det finns även parkeringsplatser att hyra för 225 kr/månad. Till varje lägenhet hör ett förråd och ett källarförråd. Det finns möjlighet att hyra extra förrådsutrymme. Husen omgärdas av grönskande gårdar med lekplatser, och det finns skola och daghem mitt i området.",
     },
   ]);
   const [isEditing, setIsEditing] = useState(false);
@@ -87,12 +47,12 @@ const News = ({ isAdmin }) => {
   const handleEdit = (index) => {
     setIsEditing(true);
     setCurrentPostIndex(index);
-    setEditContent(newsItems[index]);
+    setEditContent(blogItems[index]);
   };
 
   const handleRemove = (index) => {
-    const updatedPosts = newsItems.filter((_, i) => i !== index);
-    setNewsItems(updatedPosts);
+    const updatedPosts = blogItems.filter((_, i) => i !== index);
+    setBlogItems(updatedPosts);
   };
 
   const handleInputChange = (e) => {
@@ -105,17 +65,17 @@ const News = ({ isAdmin }) => {
   };
 
   const handleUpdatePost = () => {
-    const updatedPosts = newsItems.map((post, index) =>
+    const updatedPosts = blogItems.map((post, index) =>
       index === currentPostIndex ? editContent : post
     );
-    setNewsItems(updatedPosts);
+    setBlogItems(updatedPosts);
     setIsEditing(false);
     setEditContent({ title: "", content: "" });
     setCurrentPostIndex(null);
   };
 
   const handleAddPost = () => {
-    setNewsItems([newPost, ...newsItems]);
+    setBlogItems([newPost, ...blogItems]);
     setNewPost({ title: "", content: "" });
   };
 
@@ -124,35 +84,56 @@ const News = ({ isAdmin }) => {
       <div>
         <VideoWithFlyInText
           mediaSrc="images/img-news5.jpg"
-          text="Breaking News"
           isVideo={false}
-          height={400}
+          height={500}
           width="100%"
+          textColor="black"
           textSize="3rem"
-          textPosition="center"
+          textPosition="bottom"
           textAlignHorizontal="left"
         />
       </div>
-      <div className="news-content">
-        <h2>Breaking News</h2>
-        {newsItems.map((item, index) => (
-          <NewsItem
-            key={index}
-            item={item}
-            index={index}
-            expanded={expanded}
-            toggleContentVisibility={toggleContentVisibility}
-            handleEdit={handleEdit}
-            handleRemove={handleRemove}
-            isAdmin={isAdmin}
-          />
+      <div className="blog-content">
+        {blogItems.map((item, index) => (
+          <article key={index} className="blog-item">
+            <h4 className="blog-post-title">{item.title}</h4>
+            <p className={expanded[index] ? "expanded" : "collapsed"}>
+              {item.content}
+            </p>
+            <Button
+              onClick={() => toggleContentVisibility(index)}
+              buttonStyle="btn--outline"
+              buttonSize="btn--small"
+              aria-expanded={expanded[index]}
+            >
+              {expanded[index] ? "Read Less" : "Read More"}
+            </Button>
+            {isAdmin && (
+              <>
+                <Button
+                  onClick={() => handleEdit(index)}
+                  buttonStyle="btn--outline"
+                  buttonSize="btn--small"
+                >
+                  Edit
+                </Button>
+                <Button
+                  onClick={() => handleRemove(index)}
+                  buttonStyle="btn--outline"
+                  buttonSize="btn--small"
+                >
+                  Remove
+                </Button>
+              </>
+            )}
+          </article>
         ))}
       </div>
       {isAdmin && (
         <>
           {isEditing ? (
             <div className="edit-form">
-              <h2>Edit News</h2>
+              <h2>Edit Post</h2>
               <input
                 type="text"
                 name="title"
@@ -171,12 +152,12 @@ const News = ({ isAdmin }) => {
                 buttonStyle="btn--primary"
                 buttonSize="btn--medium"
               >
-                Update News
+                Update Post
               </Button>
             </div>
           ) : (
             <div className="edit-form">
-              <h2>Add New News</h2>
+              <h2>Add New Post</h2>
               <input
                 type="text"
                 name="title"
@@ -195,7 +176,7 @@ const News = ({ isAdmin }) => {
                 buttonStyle="btn--primary"
                 buttonSize="btn--medium"
               >
-                Add News
+                Add Post
               </Button>
             </div>
           )}
@@ -205,4 +186,4 @@ const News = ({ isAdmin }) => {
   );
 };
 
-export default News;
+export default Blog;
