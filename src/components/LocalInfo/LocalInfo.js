@@ -41,7 +41,7 @@ const LocalInfo = () => {
     { name: "Bergsjön Teleskopgatan", distance: "396 m" },
     { name: "Tycho Brahes Gata", distance: "501 m" },
     { name: "Keplers Gata", distance: "522 m" },
-    { name: "Bergsjödalen", distance: "551 m" },
+    { name: "Bergsjödalen", distance: "551m" },
   ];
 
   const tramStations = [

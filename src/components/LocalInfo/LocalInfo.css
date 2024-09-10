@@ -67,6 +67,13 @@
 
 .table--basic th {
   font-weight: normal;
+  width: 100%; /* Ensure the header takes full width */
+}
+
+.table--basic td {
+  display: flex;
+  justify-content: space-between; /* Ensure dynamic spacing */
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 .test {
@@ -81,6 +88,11 @@
 .test h2 {
   margin-top: 20px; /* Add space above headings */
 }
-.th {
-  width: 100%;
+
+/* Media query for mobile responsiveness */
+@media (max-width: 600px) {
+  .table--basic td {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+  }
 }
