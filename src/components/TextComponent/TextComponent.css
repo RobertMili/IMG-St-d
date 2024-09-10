@@ -23,7 +23,6 @@
   border: 1px solid rgb(1, 1, 10);
   border-radius: 10px;
   background-color: #f9f9f9;
-  animation-name: fadeInLeft;
   animation-duration: 2s; /* Duration of the animation */
   animation-timing-function: ease; /* Timing function for the animation */
   animation-fill-mode: both; /* Ensures the element stays in the final state */
@@ -41,6 +40,14 @@
   line-height: 1.6rem;
   white-space: pre-line;
 }
+.text-content li {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.38rem;
+  margin-bottom: 20px;
+  line-height: 1.6rem;
+  white-space: pre-line;
+}
+
 
 .text-content b {
   font-weight: bold; /* Ensure bold tags are styled correctly */

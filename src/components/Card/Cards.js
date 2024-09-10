@@ -1,6 +1,9 @@
 import React from "react";
 import "./Cards.css";
 import CardItem from "../CardItem/CardItem";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 
 function Cards() {
   return (
@@ -8,50 +11,60 @@ function Cards() {
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            <CardItem
-              src="images/item-trivselregles.jpg"
-              text="Biography of the Carl-Joar Karlsson"
-              label="Trivselregler"
-              path="/biography"
-            />
-            <CardItem
-              src="images/img-garage.png"
-              text="Biography of the Carl-Joar Karlsson"
-              label="Garage"
-              path="/news"
-            />
-             <CardItem
-              src="images/img-el2.jpg"
-              text="Biography of the Carl-Joar Karlsson"
-              label="El & Varmvatten"
-              path="/blog"
-            />
-        
+            <AnimationOnScroll animateIn="animate__bounceIn">
+              <CardItem
+                src="images/item-trivselregles.jpg"
+                text="Trivselregler för Brf Stjärnbildsgatan"
+                label="Trivselregler"
+                path="/rules"
+              />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__bounceIn">
+              <CardItem
+                src="images/img-garage.png"
+                text="Trivselregler för Brf Stjärnbildsgatan"
+                label="Garage"
+                path="/garage"
+              />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__bounceIn">
+              <CardItem
+                src="images/img-el2.jpg"
+                text="Trivselregler för Brf Stjärnbildsgatan"
+                label="El & Varmvatten"
+                path="/el_water"
+              />
+            </AnimationOnScroll>
           </ul>
           <ul className="cards__items">
-            <CardItem
-              src="images/img-tv.jpg"
-              text="Biography of the Carl-Joar Karlsson"
-              label="TV & Internet"
-              path="/blog"
-            />
+            <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
-              src="images/img-recycle.jpg"
-              text="Biography of the Carl-Joar Karlsson"
-              label="Soprum"
-              path="/news"
-            />
-            <CardItem
-              src="images/img-news.png"
-              text="Biography of the Carl-Joar Karlsson"
-              label="Nyheter"
-              path="/blog"
-            />
+                src="images/img-tv.jpg"
+                text="Trivselregler för Brf Stjärnbildsgatan"
+                label="TV & Internet"
+                path="/blog"
+              />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__bounceIn">
+              <CardItem
+                src="images/img-recycle.jpg"
+                text="Trivselregler för Brf Stjärnbildsgatan"
+                label="Soprum"
+                path="/news"
+              />
+            </AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__bounceIn">
+              <CardItem
+                src="images/img-news.png"
+                text="Trivselregler för Brf Stjärnbildsgatan"
+                label="Nyheter"
+                path="/blog"
+              />
+            </AnimationOnScroll>
           </ul>
         </div>
       </div>
     </div>
   );
 }
-
 export default Cards;

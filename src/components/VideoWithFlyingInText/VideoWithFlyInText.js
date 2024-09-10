@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./VideoWithFlyInText.css";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css/animate.min.css";
 
 const MediaWithFlyInText = ({
   mediaSrc,
@@ -58,26 +60,29 @@ const MediaWithFlyInText = ({
       className="media-container"
       style={{ width, height, position: "relative" }}
     >
-      {isVideo ? (
-        <video
-          className="hero-media"
-          src={mediaSrc}
-          autoPlay
-          loop
-          muted
-          style={{ width: "100%", height: "100%" }}
-        />
-      ) : (
-        <img
-          className="hero-media"
-          src={mediaSrc}
-          alt={text}
-          style={{ width: "100%", height: "100%" }}
-        />
-      )}
-      <h2 className="fly-in-text" style={textStyle}>
-        {text}
-      </h2>
+
+        {isVideo ? (
+          <video
+            className="hero-media"
+            src={mediaSrc}
+            autoPlay
+            loop
+            muted
+            style={{ width: "100%", height: "100%" }}
+          />
+        ) : (
+          <img
+            className="hero-media"
+            src={mediaSrc}
+            alt={text}
+            style={{ width: "100%", height: "100%" }}
+          />
+        )}
+      <AnimationOnScroll animateIn="animate__fadeInUp">
+        <h2 className="fly-in-text" style={textStyle}>
+          {text}
+        </h2>
+      </AnimationOnScroll>
     </div>
   );
 };

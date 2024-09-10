@@ -1,83 +1,20 @@
-import React, { useState } from "react";
-import { Button } from "../Button/Button"; // Ensure Button component is correctly imported
+import React from "react";
 import "./Footer.css";
-import { Link } from "react-router-dom";
-import emailjs from "emailjs-com"; // Ensure emailjs is imported
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faYoutube,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Footer() {
-  const [formData, setFormData] = useState({
-    email: "",
-    message: "",
-  });
-
-  // Handle input changes and update formData state
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Send form data using emailjs
-    emailjs
-      .sendForm(
-        "service_mgvjz5b",
-        "template_7vne56v",
-        e.target,
-        "UvGCnXxRX-3ee22mi"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log(error.text);
-          alert("Failed to send message, please try again.");
-        }
-      );
-
-    // Reset form data
-    setFormData({
-      email: "",
-      message: "",
-    });
-  };
-
   return (
-    <footer className="footer-container">
-      <div className="footer-links">
-        <div className="footer-link-wrapper">
-          <div className="footer-link-items">
-            <h2>Social Media: </h2>
-            <Link to="/">
-              <FontAwesomeIcon icon={faInstagram} size="2x" />
-              <span> Instagram</span>
-            </Link>
-            <Link to="/">
-              <FontAwesomeIcon icon={faYoutube} size="2x" />
-              <span> Youtube</span>
-            </Link>
-
-            <Link to="/">
-              <FontAwesomeIcon icon={faTwitter} size="2x" />
-              <span> Twitter</span>
-            </Link>
-          </div>
+    <div className="footer-container">
+      <AnimationOnScroll animateIn="animate__fadeInUp">
+        <div className="footer-link-items">
+          <h2>Contact Us</h2>
+          <p>Email: info@forening.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Address: 123 Förening St, City, Country</p>
         </div>
-      </div>
-    </footer>
+      </AnimationOnScroll>
+    </div>
   );
 }
 
