@@ -53,6 +53,7 @@
 }
 
 .table--basic {
+ 
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
@@ -77,6 +78,7 @@
 }
 
 .test {
+  font-size: large;
   width: 100%; /* Ensure it takes full width */
   background-color: #f9f9f9; /* Background color */
   padding: 20px;

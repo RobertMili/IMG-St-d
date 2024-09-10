@@ -53,6 +53,21 @@
   font-weight: bold; /* Ensure bold tags are styled correctly */
 }
 
+.image-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.text-image {
+  max-width: 50%; /* Set the maximum width to 50% of the container */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .text-component {

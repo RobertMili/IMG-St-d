@@ -29,11 +29,11 @@ Fastigheterna började bebyggas <b>1967</b> som flervåningshus men gjordes om <
 Brf Stjärnbildshus är en aktiv förening som deltagit i olika processer i att förbättra stadsdelen Bergsjön. 
 Styrelsen är övertygad att detta hänger ihop, föreningens bästa och vad som händer i stadsdelen i övrigt. 
 De har tidigare anordnat olika aktiviteter för både unga och äldre, bland annat haft fritidsverksamhet för barn, höst- och vårstädning, påsk- och julpyssel, datakurser, miljöutbildning för barn och vuxna samt söndagsmiddagar.`}
+        imageSrc="/images/static.png"
       />
 
-      <LocalInfo></LocalInfo>
+      <LocalInfo />
       <Cards />
-    
     </>
   );
 }
