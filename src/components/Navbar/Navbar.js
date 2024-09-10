@@ -43,7 +43,7 @@ function Navbar() {
           </li>
           <li className="nav-item" onClick={toggleDropdown}>
             <span className="nav-links">
-              Boendeinfo <i className="fas fa-caret-down" />
+            Boendeinfo <i className="fas fa-caret-down" />
             </span>
             {dropdown && (
               <ul className="dropdown-menu">
