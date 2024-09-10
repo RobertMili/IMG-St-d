@@ -63,7 +63,6 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid var(--navbar-color);
   transition: all 0.2s ease-out;
 }
 
@@ -103,7 +102,7 @@
   background: #575757;
 }
 
-@media screen and (max-width: 1132px) {
+@media screen and (max-width: 960px) {
   .navbar-container {
     position: relative;
   }
@@ -147,11 +146,11 @@
   }
 
   .nav-links:hover {
-    background-color: var(--hover-bg);
     border-radius: 0;
   }
 
   .dropdown-menu {
+    margin-left: -20px;
     position: static;
     background: var(--navbar-bg);
   }

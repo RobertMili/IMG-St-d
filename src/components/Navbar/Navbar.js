@@ -5,7 +5,6 @@ import "./Navbar.css";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = useCallback(() => setClick((prev) => !prev), []);
   const closeMobileMenu = useCallback(() => {
@@ -14,21 +13,17 @@ function Navbar() {
   }, []);
   const toggleDropdown = useCallback(() => setDropdown((prev) => !prev), []);
 
-  const showButton = useCallback(() => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  }, []);
-
   useEffect(() => {
-    showButton();
+    const showButton = () => {
+      if (window.innerWidth <= 960) {
+        setDropdown(false);
+      }
+    };
     window.addEventListener("resize", showButton);
     return () => {
       window.removeEventListener("resize", showButton);
     };
-  }, [showButton]);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -41,38 +36,46 @@ function Navbar() {
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
-
           <li className="nav-item">
-            <Link to="/rules" className="nav-links" onClick={closeMobileMenu}>
-             Trivselregler
+            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              Home
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/garage" className="nav-links" onClick={closeMobileMenu}>
-             Garage
-            </Link>
+          <li className="nav-item" onClick={toggleDropdown}>
+            <span className="nav-links">
+              BodenInfo <i className="fas fa-caret-down" />
+            </span>
+            {dropdown && (
+              <ul className="dropdown-menu">
+                
+                  <Link to="/rules" className="dropdown-link" onClick={closeMobileMenu}>
+                    Trivselregler
+                  </Link>
+              
+            
+                  <Link to="/garage" className="dropdown-link" onClick={closeMobileMenu}>
+                    Garage
+                  </Link>
+               
+                  <Link to="/el_water" className="dropdown-link" onClick={closeMobileMenu}>
+                    El & Varmvatten
+                  </Link>
+               
+                  <Link to="/tv" className="dropdown-link" onClick={closeMobileMenu}>
+                    Tv & Internet
+                  </Link>
+                
+                  <Link to="/garbage" className="dropdown-link" onClick={closeMobileMenu}>
+                    Soprum
+                  </Link>
+               
+                  <Link to="/news" className="dropdown-link" onClick={closeMobileMenu}>
+                    Nyheter
+                  </Link>
+                
+              </ul>
+            )}
           </li>
-          <li className="nav-item">
-            <Link to="/el_water" className="nav-links" onClick={closeMobileMenu}>
-              El & Varmvatten
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/tv" className="nav-links" onClick={closeMobileMenu}>
-              Tv & Internet
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/garbage" className="nav-links" onClick={closeMobileMenu}>
-              Soprum
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/news" className="nav-links" onClick={closeMobileMenu}>
-              Nyheter
-            </Link>
-          </li>
-          
         </ul>
       </div>
     </nav>
