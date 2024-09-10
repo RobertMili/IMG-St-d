@@ -15,6 +15,21 @@
   color: #333;
 }
 
+.option-button-container {
+  display: none;
+}
+
+.option-button {
+  background-color: #59277e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
 .sections-container {
   display: flex;
   justify-content: center; /* Center items horizontally */
@@ -24,7 +39,7 @@
 .section {
   flex: 1;
   margin: 10px;
-  min-width: 250px; /* Increase the minimum width */
+  min-width: 200px; /* Increase the minimum width */
   padding: 20px; /* Add padding for larger size */
   background-color: white; /* Default background color */
   border-radius: 8px; /* Rounded corners */
@@ -53,7 +68,6 @@
 }
 
 .table--basic {
- 
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
@@ -91,7 +105,22 @@
   margin-top: 20px; /* Add space above headings */
 }
 
-/* Media query for mobile responsiveness */
+@media (max-width: 900px) {
+  .section h3 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 850px) {
+  .option-button-container {
+    display: block;
+  }
+
+  .sections-container {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
   .table--basic td {
     flex-direction: column; /* Stack items vertically on smaller screens */

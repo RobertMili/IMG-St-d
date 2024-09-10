@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBus, faSchool, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import "./LocalInfo.css";
@@ -31,10 +31,36 @@ const InfoTable = ({ title, items }) => (
 
 const LocalInfo = () => {
   const [activeSection, setActiveSection] = useState('busStations'); // Default to 'busStations'
+  const [click, setClick] = useState(false);
 
   const toggleSection = (section) => {
     setActiveSection(activeSection === section ? null : section);
+    setClick(false); // Close the menu after selecting a section
   };
+
+  const handleClick = useCallback(() => setClick((prev) => !prev), []);
+  const closeMobileMenu = useCallback(() => setClick(false), []);
+
+  const sections = [
+    {
+      title: "KOMMUNIKATIONER",
+      icon: faBus,
+      isVisible: activeSection === 'busStations',
+      toggleVisibility: () => toggleSection('busStations')
+    },
+    {
+      title: "SKOLA",
+      icon: faSchool,
+      isVisible: activeSection === 'schools',
+      toggleVisibility: () => toggleSection('schools')
+    },
+    {
+      title: "ÖVRIGT",
+      icon: faInfoCircle,
+      isVisible: activeSection === 'otherInfo',
+      toggleVisibility: () => toggleSection('otherInfo')
+    }
+  ];
 
   const busStations = [
     { name: "Merkuriusgatan", distance: "259 m" },
@@ -79,27 +105,34 @@ const LocalInfo = () => {
 
   return (
     <div className="local-info-container">
-      <div className="sections-container">
-        <Section
-          title="KOMMUNIKATIONER"
-          icon={faBus}
-          isVisible={activeSection === 'busStations'}
-          toggleVisibility={() => toggleSection('busStations')}
-        />
-        <Section
-          title="SKOLA"
-          icon={faSchool}
-          isVisible={activeSection === 'schools'}
-          toggleVisibility={() => toggleSection('schools')}
-        />
-        <Section
-          title="ÖVRIGT"
-          icon={faInfoCircle}
-          isVisible={activeSection === 'otherInfo'}
-          toggleVisibility={() => toggleSection('otherInfo')}
-        />
+      <div className="option-button-container">
+        <select
+          className="option-button"
+          value={sections.findIndex(section => section.isVisible)}
+          onChange={(e) => {
+            const selectedSection = sections[e.target.value];
+            selectedSection.toggleVisibility();
+          }}
+        >
+        
+          {sections.map((section, index) => (
+            <option key={index} value={index}>
+              {section.title}
+            </option>
+          ))}
+        </select>
       </div>
-
+      <div className="sections-container">
+        {sections.map((section, index) => (
+          <Section
+            key={index}
+            title={section.title}
+            icon={section.icon}
+            isVisible={section.isVisible}
+            toggleVisibility={section.toggleVisibility}
+          />
+        ))}
+      </div>
       <div className="test">
         {activeSection === 'busStations' && (
           <>

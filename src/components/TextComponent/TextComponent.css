@@ -61,7 +61,7 @@
 }
 
 .text-image {
-  max-width: 50%; /* Set the maximum width to 50% of the container */
+  max-width: 100%; /* Set the maximum width to 50% of the container */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
