@@ -1,0 +1,86 @@
+.local-info-container {
+  display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border-radius: 3px;
+  box-shadow: 0 10px 10px transparent;
+  margin: 24px 0;
+  transition: box-shadow 0.2s ease-in-out;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.local-info-container h2 {
+  color: #333;
+}
+
+.sections-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.section {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px; /* Increase the minimum width */
+  padding: 20px; /* Add padding for larger size */
+  background-color: white; /* Default background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for emphasis */
+  transition: all 0.3s ease; /* Smooth transition for size change */
+  box-sizing: border-box; /* Ensure padding is included in the width and height */
+  width: 100%; /* Ensure it takes full width */
+}
+
+.section.active {
+  background-color: #c5c2c2; /* Change background color when active */
+}
+
+.section h3 {
+  font-size: 18px; /* Increase font size */
+  height: 54px; /* Increase height */
+  line-height: 54px; /* Adjust line height */
+  padding: 0 16px;
+  margin: 0; /* Remove default margin */
+  position: relative;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  color: #59277e;
+  transition: all 0.3s ease; /* Smooth transition for size change */
+}
+
+.table--basic {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table--basic th,
+.table--basic td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.table--basic th {
+  font-weight: normal;
+}
+
+.test {
+  width: 100%; /* Ensure it takes full width */
+  background-color: #f9f9f9; /* Background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for emphasis */
+  margin-top: 20px; /* Add space above */
+}
+
+.test h2 {
+  margin-top: 20px; /* Add space above headings */
+}
+.th {
+  width: 100%;
+}

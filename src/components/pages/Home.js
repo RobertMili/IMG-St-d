@@ -5,6 +5,7 @@ import Cards from "../Card/Cards";
 import Footer from "../Footer/Footer";
 import VideoWithFlyInText from "../VideoWithFlyingInText/VideoWithFlyInText";
 import TextComponent from "../TextComponent/TextComponent";
+import LocalInfo from "../../components/LocalInfo/LocalInfo";
 
 function Home() {
   return (
@@ -29,6 +30,8 @@ Brf Stjärnbildshus är en aktiv förening som deltagit i olika processer i att 
 Styrelsen är övertygad att detta hänger ihop, föreningens bästa och vad som händer i stadsdelen i övrigt. 
 De har tidigare anordnat olika aktiviteter för både unga och äldre, bland annat haft fritidsverksamhet för barn, höst- och vårstädning, påsk- och julpyssel, datakurser, miljöutbildning för barn och vuxna samt söndagsmiddagar.`}
       />
+
+      <LocalInfo></LocalInfo>
       <Cards />
     
     </>

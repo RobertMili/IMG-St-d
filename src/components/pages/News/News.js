@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Blog.css";
+import "./News.css";
 import VideoWithFlyInText from "../../VideoWithFlyingInText/VideoWithFlyInText";
 import { Button } from "../../Button/Button";
 
