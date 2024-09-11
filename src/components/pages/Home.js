@@ -21,6 +21,7 @@ function Home() {
           textAlignHorizontal="left"
         />
       </div>
+    
       <TextComponent
         title="Welcome to Brf Stjärnbildsgatan!"
         text={`Brf Stjärnbildshus nr <b>1</b> registrerades <b>1984</b> och innehåller nu <b>89</b> lägenheter med bostadsrätt. 

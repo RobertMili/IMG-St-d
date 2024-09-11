@@ -66,6 +66,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+:root {
+  --content-max-width: 1200px; /* Set a max width for content */
+}
+
+.content-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 20px; /* Optional padding for better spacing */
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
