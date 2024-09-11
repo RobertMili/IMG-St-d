@@ -18,6 +18,11 @@ function Navbar() {
     closeMobileMenu();
     setDropdown(true);
   };
+  
+  const topOfSide = () => {
+    window.scrollTo(0, 0);
+    closeMobileMenu();
+  }
 
   useEffect(() => {
     const showButton = () => {
@@ -43,7 +48,7 @@ function Navbar() {
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={handleLinkClick}>
+            <Link to="/" className="nav-links" onClick={topOfSide}>
               Home
             </Link>
           </li>
