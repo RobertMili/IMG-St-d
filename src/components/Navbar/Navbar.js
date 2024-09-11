@@ -38,41 +38,33 @@ function Navbar() {
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-              Home
+              Hem
             </Link>
           </li>
           <li className="nav-item" onClick={toggleDropdown}>
             <span className="nav-links">
-            Boendeinfo <i className="fas fa-caret-down" />
+              Boendeinfo <i className="fas fa-caret-down dropdown-arrow" />
             </span>
             {dropdown && (
               <ul className="dropdown-menu">
-                
-                  <Link to="/rules" className="dropdown-link" onClick={closeMobileMenu}>
-                    Trivselregler
-                  </Link>
-              
-            
-                  <Link to="/garage" className="dropdown-link" onClick={closeMobileMenu}>
-                    Garage
-                  </Link>
-               
-                  <Link to="/el_water" className="dropdown-link" onClick={closeMobileMenu}>
-                    El & Varmvatten
-                  </Link>
-               
-                  <Link to="/tv" className="dropdown-link" onClick={closeMobileMenu}>
-                    Tv & Internet
-                  </Link>
-                
-                  <Link to="/garbage" className="dropdown-link" onClick={closeMobileMenu}>
-                    Soprum
-                  </Link>
-               
-                  <Link to="/news" className="dropdown-link" onClick={closeMobileMenu}>
-                    Nyheter
-                  </Link>
-                
+                <Link to="/rules" className="dropdown-link" onClick={closeMobileMenu}>
+                  Trivselregler
+                </Link>
+                <Link to="/garage" className="dropdown-link" onClick={closeMobileMenu}>
+                  Garage
+                </Link>
+                <Link to="/el_water" className="dropdown-link" onClick={closeMobileMenu}>
+                  El & Varmvatten
+                </Link>
+                <Link to="/tv" className="dropdown-link" onClick={closeMobileMenu}>
+                  Tv & Internet
+                </Link>
+                <Link to="/garbage" className="dropdown-link" onClick={closeMobileMenu}>
+                  Soprum
+                </Link>
+                <Link to="/news" className="dropdown-link" onClick={closeMobileMenu}>
+                  Nyheter
+                </Link>
               </ul>
             )}
           </li>
