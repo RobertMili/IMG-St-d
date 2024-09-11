@@ -4,7 +4,6 @@ import CardItem from "../CardItem/CardItem";
 import "animate.css/animate.min.css";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-
 function Cards() {
   return (
     <div className="cards">
@@ -22,7 +21,7 @@ function Cards() {
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-garage.png"
-                text="Trivselregler för Brf Stjärnbildsgatan"
+                text="Garage för Brf Stjärnbildsgatan"
                 label="Garage"
                 path="/garage"
               />
@@ -30,7 +29,7 @@ function Cards() {
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-el2.jpg"
-                text="Trivselregler för Brf Stjärnbildsgatan"
+                text="El & Varmvatten för Brf Stjärnbildsgatan"
                 label="El & Varmvatten"
                 path="/el_water"
               />
@@ -40,7 +39,7 @@ function Cards() {
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-tv.jpg"
-                text="Trivselregler för Brf Stjärnbildsgatan"
+                text="TV & Internet för Brf Stjärnbildsgatan"
                 label="TV & Internet"
                 path="/tv"
               />
@@ -48,7 +47,7 @@ function Cards() {
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-recycle.jpg"
-                text="Trivselregler för Brf Stjärnbildsgatan"
+                text="Soprum för Brf Stjärnbildsgatan"
                 label="Soprum"
                 path="/garbage"
               />
@@ -56,7 +55,7 @@ function Cards() {
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-news.png"
-                text="Trivselregler för Brf Stjärnbildsgatan"
+                text="Nyheter för Brf Stjärnbildsgatan"
                 label="Nyheter"
                 path="/news"
               />
@@ -67,4 +66,5 @@ function Cards() {
     </div>
   );
 }
+
 export default Cards;

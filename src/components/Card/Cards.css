@@ -36,12 +36,17 @@ h1 {
 }
 
 .cards__item {
+
   display: flex;
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
   flex-direction: column;
+  width: 400px;
+  margin-left: -20px;
+
 }
+
 .cards__item_second {
   display: flex;
   flex: 1;
@@ -90,7 +95,6 @@ h1 {
 }
 
 .cards__item__img {
-
   position: absolute;
   top: 0;
   right: 0;
@@ -125,15 +129,20 @@ h1 {
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .cards__items {
-    display: flex;
+
+
+@media only screen and (max-width: 1124px) {
+  .cards__item {
+    margin-bottom: 2rem;
+    width: 300px;
+  
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .cards__item {
-    margin-bottom: 2rem;
+@media only screen and (min-width: 1024px) {
+  .cards__items {
+    display: flex;
+  
   }
 }
 
@@ -143,6 +152,7 @@ h1 {
   }
 
   .cards__items {
+    
     display: flex;
     flex-direction: column; /* Stack cards vertically */
     align-items: center;
@@ -151,8 +161,12 @@ h1 {
   .cards__item {
     margin: 1rem 0; /* Adjust margin for better spacing */
     width: 100%; /* Ensure cards take full width */
+    height: auto; /* Adjust height for smaller screens */
   }
-
+  .cards__item {
+    width: 350px;
+    margin-left: -20px;
+  }
   .cards__item__info {
     padding: 15px 20px; /* Adjust padding for smaller screens */
   }
