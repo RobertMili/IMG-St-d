@@ -173,4 +173,19 @@
     width: 100vw; /* Full viewport width */
   }
   
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo-text {
+    margin-right: 0.5rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    .navbar-logo-text {
+      display: none;
+    }
+  }
 }

@@ -39,9 +39,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          Brf Stjärnbildsgatan&nbsp;
-          <i className="fas fa-home" />
+        <Link to="/" className="navbar-logo" onClick={topOfSide}>
+          <span className="navbar-logo-text">Brf Stjärnbildsgatan</span>
+          <i className="fas fa-home navbar-logo-icon" />
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
