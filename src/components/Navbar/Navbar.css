@@ -112,9 +112,9 @@
 
 @media screen and (max-width: 960px) {
 
-  .nav-links:hover {
-    margin-right: 10px;
-    margin-left: -10px;
+  .nav-item {
+    margin-right: 30px;
+    margin-left: -20px;
   }
 
   .navbar-container {
