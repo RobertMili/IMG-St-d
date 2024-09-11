@@ -64,6 +64,9 @@
 
 .nav-links:hover {
   transition: all 0.2s ease-out;
+  background: var(--hover-bg);
+  color: var(--hover-color);
+
 }
 
 .nav-menu.active {
@@ -108,6 +111,12 @@
 }
 
 @media screen and (max-width: 960px) {
+
+  .nav-links:hover {
+    margin-right: 10px;
+    margin-left: -10px;
+  }
+
   .navbar-container {
     position: relative;
   }
@@ -130,7 +139,7 @@
     height: calc(100vh - var(--navbar-height));
     position: absolute;
     top: var(--navbar-height);
-    left: -100%;
+    left: -150%;
     opacity: 1;
     
   }
@@ -142,6 +151,7 @@
     transition: all 0.5s ease;
     z-index: 1;
   }
+  
 
   .nav-links {
     text-align: center;
@@ -155,10 +165,10 @@
   }
 
   .dropdown-menu {
-    margin-left: -20px;
+    margin-left: 0; /* Ensure no left margin */
     position: static;
     background: var(--navbar-bg);
-    
+    width: 100vw; /* Full viewport width */
   }
   
 }
