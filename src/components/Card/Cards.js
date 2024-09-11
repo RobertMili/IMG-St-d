@@ -2,7 +2,7 @@ import React from "react";
 import "./Cards.css";
 import CardItem from "../CardItem/CardItem";
 import "animate.css/animate.min.css";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function Cards() {
   return (
@@ -18,6 +18,7 @@ function Cards() {
                 path="/rules"
               />
             </AnimationOnScroll>
+
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-garage.png"
@@ -26,6 +27,7 @@ function Cards() {
                 path="/garage"
               />
             </AnimationOnScroll>
+
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-el2.jpg"
@@ -44,6 +46,7 @@ function Cards() {
                 path="/tv"
               />
             </AnimationOnScroll>
+
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-recycle.jpg"
@@ -52,6 +55,7 @@ function Cards() {
                 path="/garbage"
               />
             </AnimationOnScroll>
+
             <AnimationOnScroll animateIn="animate__bounceIn">
               <CardItem
                 src="images/img-news.png"
