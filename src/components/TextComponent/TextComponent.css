@@ -60,7 +60,8 @@
 }
 
 .text-image {
-  max-width: 700px; /* Set the maximum width to 50% of the container */
+  max-width: 100%; /* Set the maximum width to 100% of the container */
+  max-height: 100%; /* Set the maximum height to 100% of the container */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -78,13 +79,12 @@
 
 /* Adjustments for 15-inch monitors (1366px width) */
 @media (max-height: 800px) {
-  
   .text-image {
-    height: 400px;
+    max-height: 50vh; /* Adjust max height for better responsiveness */
   }
-  
+
   .text-component {
-    margin: px 0; /* Adjust margins for better spacing */
+    margin: 10px 0; /* Adjust margins for better spacing */
     padding: 1.5rem; /* Adjust padding for 15-inch screens */
   }
 

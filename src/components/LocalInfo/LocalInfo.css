@@ -116,7 +116,7 @@
 .test h2 {
   margin-top: 20px; /* Add space above headings */
 }
-@media (max-height: 1300px) {
+@media (max-height: 1100px) {
  .local-info-container {
   margin-top: 50px;
  }
