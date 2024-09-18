@@ -85,7 +85,7 @@ const Blog = ({ isAdmin }) => {
         <VideoWithFlyInText
           mediaSrc="images/img-news5.jpg"
           isVideo={false}
-          height={500}
+          height={270}
           width="100%"
           textColor="black"
           textSize="3rem"

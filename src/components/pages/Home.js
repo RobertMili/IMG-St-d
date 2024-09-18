@@ -15,13 +15,13 @@ function Home() {
           mediaSrc="/images/img-1 (copy).jpg"
           isVideo={false}
           width="100%"
-          height="70%"
+          height="10%"
           textSize="3rem"
           textPosition="top"
           textAlignHorizontal="left"
         />
       </div>
-    
+
       <TextComponent
         title="Welcome to Brf Stjärnbildsgatan!"
         text={`Brf Stjärnbildshus nr <b>1</b> registrerades <b>1984</b> och innehåller nu <b>89</b> lägenheter med bostadsrätt. 

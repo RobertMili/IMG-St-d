@@ -14,7 +14,7 @@ const Rules = () => {
         mediaSrc="/images/img-garage.png"
         isVideo={false}
         width="100%"
-        height="400px"
+        height="300px"
         textSize="3rem"
         textPosition="top"
         textAlignHorizontal="left"

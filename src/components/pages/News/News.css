@@ -80,6 +80,8 @@ button:hover {
   background-color: #ddd;
 }
 
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .blog {

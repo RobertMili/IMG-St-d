@@ -5,6 +5,8 @@ import "./Navbar.css";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
 
   const handleClick = useCallback(() => setClick((prev) => !prev), []);
   const closeMobileMenu = useCallback(() => {
@@ -36,8 +38,21 @@ function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const visible = prevScrollPos > currentScrollPos;
+
+      setPrevScrollPos(currentScrollPos);
+      setVisible(visible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${visible ? "navbar-visible" : "navbar-hidden"}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={topOfSide}>
           <span className="navbar-logo-text">Brf Stjärnbildsgatan</span>

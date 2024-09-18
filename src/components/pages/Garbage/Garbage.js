@@ -14,14 +14,14 @@ const Rules = () => {
         mediaSrc="/images/img-garage.png"
         isVideo={false}
         width="100%"
-        height="400px"
+        height="300px"
         textSize="3rem"
         textPosition="top"
         textAlignHorizontal="left"
       />
       <div className="trivselregler-container">
         <TextComponent
-          title="Suprum"
+          title="Soprum"
           text={`
           
           För att behålla ett trivsamt soprum till allas trevnad, knyt ihop dina soppåsar ordentligt så att dina sopor inte läcker eller faller ur sina kastade påsar. Se till att kartongerna är ordentligt hopslagna innan de läggs i återvinningen för kartong. Det gör att vi får mer plats och slipper att ställa kartonger på soprumsgolvet.
