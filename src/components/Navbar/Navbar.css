@@ -30,6 +30,21 @@
   z-index: 999;
 }
 
+
+/* Define the initial state of the navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s ease;
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+/* Define the hidden state of the navigation bar */
+.navbar-hidden {
+  top: -100px; /* Adjust this value based on the height of your navbar */
+}
+
 .navbar-container {
   display: flex;
   justify-content: space-between;

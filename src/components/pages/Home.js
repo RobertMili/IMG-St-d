@@ -1,5 +1,4 @@
 import React from "react";
-import "../../App.css";
 import HeroSection from "../CardSection/CardSection";
 import Cards from "../Card/Cards";
 import Footer from "../Footer/Footer";
@@ -15,10 +14,11 @@ function Home() {
           mediaSrc="/images/img-1 (copy).jpg"
           isVideo={false}
           width="100%"
-          height="10%"
+          height="580px"
           textSize="3rem"
           textPosition="top"
           textAlignHorizontal="left"
+          text=" "
         />
       </div>
 

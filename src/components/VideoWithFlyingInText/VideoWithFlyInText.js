@@ -16,6 +16,7 @@ const MediaWithFlyInText = ({
   textAlignHorizontal = "center",
 }) => {
   const [textLeft, setTextLeft] = useState('50%');
+  const [mediaHeight, setMediaHeight] = useState(height);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +33,15 @@ const MediaWithFlyInText = ({
       } else {
         setTextLeft('50%');
       }
+
+
+      if(window.innerWidth <= 560) {
+        setMediaHeight('350px');
+      } else if (window.innerWidth <= 768) {
+        setMediaHeight('300px');
+      } else {
+        setMediaHeight(height);
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -40,7 +50,7 @@ const MediaWithFlyInText = ({
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [textAlignHorizontal]);
+  }, [textAlignHorizontal, height]);
 
   const textStyle = {
     color: textColor,
@@ -58,26 +68,25 @@ const MediaWithFlyInText = ({
   return (
     <div
       className="media-container"
-      style={{ width, height, position: "relative" }}
+      style={{ width, height: mediaHeight, position: "relative" }}
     >
-
-        {isVideo ? (
-          <video
-            className="hero-media"
-            src={mediaSrc}
-            autoPlay
-            loop
-            muted
-            style={{ width: "100%", height: "100%" }}
-          />
-        ) : (
-          <img
-            className="hero-media"
-            src={mediaSrc}
-            alt={text}
-            style={{ width: "100%", height: "100%" }}
-          />
-        )}
+      {isVideo ? (
+        <video
+          className="hero-media"
+          src={mediaSrc}
+          autoPlay
+          loop
+          muted
+          style={{ width: "100%", height: "100%" }}
+        />
+      ) : (
+        <img
+          className="hero-media"
+          src={mediaSrc}
+          alt={text}
+          style={{ width: "100%", height: "100%" }}
+        />
+      )}
       <AnimationOnScroll animateIn="animate__fadeInUp">
         <h2 className="fly-in-text" style={textStyle}>
           {text}
