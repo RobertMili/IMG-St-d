@@ -19,6 +19,7 @@ function Home() {
           textPosition="top"
           textAlignHorizontal="left"
           text=" "
+           paddingTop="80px"
         />
       </div>
 

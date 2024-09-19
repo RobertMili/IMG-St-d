@@ -18,8 +18,8 @@ const Rules = () => {
         textSize="3rem"
         textPosition="top"
         textAlignHorizontal="left"
-         objectFit="scale-down"
-
+        objectFit="scale-down"
+        paddingTop="20px"
       />
       <div className="trivselregler-container">
         <TextComponent

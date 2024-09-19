@@ -93,6 +93,7 @@ const Blog = ({ isAdmin }) => {
           textPosition="bottom"
           textAlignHorizontal="left"
           objectFit="cover"
+          paddingTop="0px"
         />
       </div>
       <div className="blog-content">

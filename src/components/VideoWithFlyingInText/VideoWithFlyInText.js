@@ -14,7 +14,8 @@ const MediaWithFlyInText = ({
   textSize = "2rem",
   textPosition = "center",
   textAlignHorizontal = "center",
-  objectFit = "cover" // Default value for object-fit
+  objectFit = "cover", // Default value for object-fit
+  paddingTop = "0px" // Default value for padding-top
 }) => {
   const [textLeft, setTextLeft] = useState('50%');
   const [mediaHeight, setMediaHeight] = useState(height);
@@ -68,7 +69,7 @@ const MediaWithFlyInText = ({
   return (
     <div
       className="media-container"
-      style={{ width, height: mediaHeight, position: "relative" }}
+      style={{ width, height: mediaHeight, position: "relative", paddingTop }}
     >
       {isVideo ? (
         <video
@@ -106,8 +107,13 @@ MediaWithFlyInText.propTypes = {
   textSize: PropTypes.string,
   textPosition: PropTypes.oneOf(["top", "center", "bottom"]),
   textAlignHorizontal: PropTypes.oneOf(["left", "center", "right"]),
-  objectFit: PropTypes.oneOf(["contain", "cover", "fill", "none", "scale-down"]) // Add prop type for objectFit
+  objectFit: PropTypes.oneOf(["contain", "cover", "fill", "none", "scale-down"]), // Add prop type for objectFit
+  paddingTop: PropTypes.oneOfType([PropTypes.string, PropTypes.number]) // Add prop type for paddingTop
 };
 
+MediaWithFlyInText.defaultProps = {
+  objectFit: "cover", // Default value for object-fit
+  paddingTop: "0px" // Default value for padding-top
+};
 
 export default MediaWithFlyInText;

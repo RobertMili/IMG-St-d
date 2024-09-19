@@ -30,6 +30,7 @@ const Rules = () => {
         textPosition="top"
         textAlignHorizontal="left"
         objectFit="cover"
+         paddingTop="20px"
       />
       <div className="trivselregler-container">
         <TextComponent
