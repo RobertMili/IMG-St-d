@@ -11,13 +11,14 @@ const Rules = () => {
   return (
     <>
       <VideoWithFlyInText
-        mediaSrc="/images/img-garage.png"
+        mediaSrc="/images/Designer.jpeg"
         isVideo={false}
         width="100%"
-        height="300px"
+        height="500px"
         textSize="3rem"
         textPosition="top"
         textAlignHorizontal="left"
+        objectFit="contain"
       />
       <div className="trivselregler-container">
         <TextComponent

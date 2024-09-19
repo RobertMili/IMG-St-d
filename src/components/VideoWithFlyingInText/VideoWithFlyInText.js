@@ -14,6 +14,7 @@ const MediaWithFlyInText = ({
   textSize = "2rem",
   textPosition = "center",
   textAlignHorizontal = "center",
+  objectFit = "cover" // Default value for object-fit
 }) => {
   const [textLeft, setTextLeft] = useState('50%');
   const [mediaHeight, setMediaHeight] = useState(height);
@@ -33,7 +34,6 @@ const MediaWithFlyInText = ({
       } else {
         setTextLeft('50%');
       }
-
 
       if(window.innerWidth <= 560) {
         setMediaHeight('350px');
@@ -77,14 +77,14 @@ const MediaWithFlyInText = ({
           autoPlay
           loop
           muted
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", height: "100%", objectFit }}
         />
       ) : (
         <img
           className="hero-media"
           src={mediaSrc}
           alt={text}
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", height: "100%", objectFit }}
         />
       )}
       <AnimationOnScroll animateIn="animate__fadeInUp">
@@ -106,6 +106,8 @@ MediaWithFlyInText.propTypes = {
   textSize: PropTypes.string,
   textPosition: PropTypes.oneOf(["top", "center", "bottom"]),
   textAlignHorizontal: PropTypes.oneOf(["left", "center", "right"]),
+  objectFit: PropTypes.oneOf(["contain", "cover", "fill", "none", "scale-down"]) // Add prop type for objectFit
 };
+
 
 export default MediaWithFlyInText;

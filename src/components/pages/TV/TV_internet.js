@@ -18,6 +18,7 @@ const Rules = () => {
         textSize="3rem"
         textPosition="top"
         textAlignHorizontal="left"
+         objectFit="scale-down"
 
       />
       <div className="trivselregler-container">

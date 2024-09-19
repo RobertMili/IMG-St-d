@@ -29,6 +29,7 @@ const Rules = () => {
         textSize="3rem"
         textPosition="top"
         textAlignHorizontal="left"
+        objectFit="cover"
       />
       <div className="trivselregler-container">
         <TextComponent

@@ -87,10 +87,12 @@ const Blog = ({ isAdmin }) => {
           isVideo={false}
           height={270}
           width="100%"
+          text=" "
           textColor="black"
           textSize="3rem"
           textPosition="bottom"
           textAlignHorizontal="left"
+          objectFit="cover"
         />
       </div>
       <div className="blog-content">
