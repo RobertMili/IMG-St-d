@@ -16,32 +16,32 @@ import El_water from "./components/pages/El-water/El-water";
 import Tv_internet from "./components/pages/TV/TV_internet";
 import Garbage from "./components/pages/Garbage/Garbage";
 
-
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
 
   return (
-    <>
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/biography" element={<Biography />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/sign-up" element={<SignUp />} />
-        <Route path="/news" element={<News isAdmin={isAdmin} />} />
-        <Route path="/admin" element={<Admin setIsAdmin={setIsAdmin} />} />
-        <Route path="/rules" element={<Rules />} />
-        <Route path="/garage" element={<Garage />} />
-        <Route path="/el_water" element={<El_water />} />
-        <Route path="/tv" element={<Tv_internet />} />
-        <Route path="/garbage" element={<Garbage />} />
-     
-      </Routes>
-      <Footer />
+      <div className="app-container">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/biography" element={<Biography />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/news" element={<News isAdmin={isAdmin} />} />
+            <Route path="/admin" element={<Admin setIsAdmin={setIsAdmin} />} />
+            <Route path="/rules" element={<Rules />} />
+            <Route path="/garage" element={<Garage />} />
+            <Route path="/el_water" element={<El_water />} />
+            <Route path="/tv" element={<Tv_internet />} />
+            <Route path="/garbage" element={<Garbage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
-    </>
   );
 }
 
