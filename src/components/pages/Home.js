@@ -28,9 +28,8 @@ function Home() {
         text={`Brf Stjärnbildshus nr <b>1</b> registrerades <b>1984</b> och innehåller nu <b>89</b> lägenheter med bostadsrätt. 
 Fastigheterna började bebyggas <b>1967</b> som flervåningshus men gjordes om <b>1987</b> till bostadsrätter med radhuskaraktär och utgörs av fyra flerbostadshus med total lägenhetsyta på <b>8257</b> kvm.
 
-Brf Stjärnbildshus är en aktiv förening som deltagit i olika processer i att förbättra stadsdelen Bergsjön. 
-Styrelsen är övertygad att detta hänger ihop, föreningens bästa och vad som händer i stadsdelen i övrigt. 
-De har tidigare anordnat olika aktiviteter för både unga och äldre, bland annat haft fritidsverksamhet för barn, höst- och vårstädning, påsk- och julpyssel, datakurser, miljöutbildning för barn och vuxna samt söndagsmiddagar.`}
+BRF Stjärnbildshus är en aktiv förening som strävar efter att förbättra livskvaliteten i stadsdelen Bergsjön. Föreningen ligger nära en träningsbana, vilket ger medlemmarna möjlighet till aktiv livsstil och sport. Området är även omgiven av vacker skog och natur, vilket erbjuder fina möjligheter för promenader, cykelturer och andra utomhusaktiviteter. Dessutom ligger en sjö i närheten, perfekt för avkoppling och rekreation.
+`}
         imageSrc="/images/static.png"
       />
 

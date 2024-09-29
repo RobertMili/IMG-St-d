@@ -14,22 +14,22 @@ const Blog = ({ isAdmin }) => {
     {
       title: "Renoveringar och Förbättringar i Brf Stjärnbildsgatan",
       content:
-        "Brf Stjärnbildshus har genomfört flera renoveringar för att förbättra boendemiljön. 2011 byttes balkongdörrar och fönster till moderna 2-glas. 2013 utfördes värmejusteringar och våtrumsbesiktningar. 2014 byttes ventilationen ut och stammarna inspekterades. 2017 rustades lekplatserna upp och OVK genomfördes. 2018 lades taken om. Föreningen följer en underhållsplan som sträcker sig till 2043.",
+        "Brf Stjärn renoveringar för att förbättra boendemiljön. 2011 byttes balkongdörrar och fönster till moderna 2-glas. 2013 utfördes värmejusteringar och våtrumsbesiktningar. 2014 byttes ventilationen ut och stammarna inspekterades. 2017 rustades lekplatserna upp och OVK genomfördes. 2018 lades taken om. Föreningen följer en underhållsplan som sträcker sig till 2043."
     },
     {
-      title: "Ekonomisk Förvaltning och Avgifter",
+      title: "Renoveringar tak och fönstärbyte",
       content:
-        "Den ekonomiska förvaltningen sköts av SBC och föreningen har god ekonomi. Månadsavgiften inkluderar värme, vatten, grundutbud på kabel-TV, bredbandsuppkoppling, bostadsrättstillägg på hemförsäkringen och i de flesta fall även en garageplats. Inga planerade avgiftshöjningar för 2021 finns.",
+        "Brf Stjärnbildshus 1 fortsätter att förbättra boendemiljön för sina medlemmar. Under 2020 genomfördes ett omfattande takbyte, vilket har ökat både energieffektiviteten och livslängden för byggnaderna. Dessutom byttes samtliga fönster ut under 2023, vilket ytterligare bidrar till en bättre boendemiljö och sänkta energikostnader. Föreningen arbetar kontinuerligt för att följa sin underhållsplan och säkerställa att fastigheterna hålls i gott skick. Vi strävar efter att informera medlemmarna om pågående och kommande projekt för att öka trivseln och livskvaliteten i föreningen.",
     },
     {
-      title: "TV och Internet i Brf Stjärnbildsgatan",
+      title: "Gemenskapsaktiviteter och Engagemang",
       content:
-        "Kabel-TV levereras via ComHem och grundutbudet av kanaler ingår i månadsavgiften. Även bredbandsuppkopplingen ingår i månadsavgiften och levereras via ComHem.",
+        "Brf Stjärnbildsgatan strävar efter att stärka gemenskapen bland sina medlemmar. Under året planeras flera aktiviteter, såsom grillkvällar och gemensamma städdagar, där medlemmarna kan träffas och umgås. Dessa evenemang syftar till att öka trivseln och engagemanget inom föreningen och att skapa en mer sammanhållen miljö för alla boende.",
     },
     {
-      title: "Parkering och Gemensamma Utrymmen",
+      title: "Framtidsplaner och Hållbarhet",
       content:
-        "De flesta lägenheter har en garageplats. Det finns även parkeringsplatser att hyra för 225 kr/månad. Till varje lägenhet hör ett förråd och ett källarförråd. Det finns möjlighet att hyra extra förrådsutrymme. Husen omgärdas av grönskande gårdar med lekplatser, och det finns skola och daghem mitt i området.",
+        "Föreningen är engagerad i att göra hållbara val för framtiden. Planer finns på att installera solpaneler på taken för att minska energikostnaderna och öka föreningens självförsörjning. Dessutom kommer en uppdaterad underhållsplan att presenteras för att säkerställa att alla gemensamma utrymmen hålls i gott skick och att medlemmarna får information om kommande projekt som kan påverka boendemiljön.",
     },
   ]);
   const [isEditing, setIsEditing] = useState(false);

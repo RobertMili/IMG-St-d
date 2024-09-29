@@ -24,19 +24,18 @@ const Rules = () => {
         <TextComponent
           title="Garage"
           text={`
-        
-      Vi delar ett gemensamt garage med våra två grannföreningar BRF Downtown och BRF Täby Torg. Vår förening har 37 platser, där vissa är utrustade med elbilsladdare.
+          
+          BRF Stjärnbildsgatan erbjuder garageplatser för majoriteten av sina lägenheter. Totalt har 86 av föreningens 89 lägenheter tillgång till en egen garageplats i någon av garagelängorna i början av Stjärnbildsgatan.
 
-Priser:
+Parkeringsplatser:
+De lägenheter som inte har en fast garageplats kan hyra en parkeringsplats. Det finns cirka 10 parkeringsplatser tillgängliga för uthyrning, med en separat kö, för 400 kr/månad.
 
-Singelplats: 1100 kr/månad
-Familjeplatser (två platser): 1400 kr/månad
-El-tillägg "DUO-laddare": +300 kr/månad (el ingår ej, debiteras via InCharge)
-El-tillägg "gamla laddare" med fri el-laddning: +700 kr/månad
-Garagets nedfart ligger vid Häradsgränd och det finns hissar från trapphusen ner till garaget.
+Tillfälliga lösningar:
+Om ingen ledig parkeringsplats finns kan tillfälliga lösningar erbjudas tills en fast plats blir tillgänglig.
 
-En fjärrkontroll till porten ingår i hyran mot en depositionsavgift. 
-`}
+Besöksparkering:
+För gäster finns besöksparkeringar i anslutning till garagelängorna och på intilliggande områden.
+          `}
         />
       </div>
     </>
