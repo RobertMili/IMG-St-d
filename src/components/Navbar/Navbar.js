@@ -20,7 +20,7 @@ function Navbar() {
     closeMobileMenu();
     setDropdown(true);
   };
-  
+
   const topOfSide = () => {
     window.scrollTo(0, 0);
     closeMobileMenu();
@@ -55,19 +55,35 @@ function Navbar() {
     <nav className={`navbar ${visible ? "navbar-visible" : "navbar-hidden"}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={topOfSide}>
-          <span className="navbar-logo-text">Brf Stjärnbildsgatan</span>
-          <i className="fas fa-home navbar-logo-icon" />
+          <i className="fas fa-gem navbar-logo-icon" />
+          <span className="navbar-logo-text">IMG Städ</span>
         </Link>
+
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={topOfSide}>
-              Home
+              Hem
             </Link>
           </li>
-          <li className="nav-item" onClick={toggleDropdown}>
+          <li className="nav-item">
+            <Link to="/" className="nav-links" onClick={topOfSide}>
+              Om oss
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/" className="nav-links" onClick={topOfSide}>
+              Kontakt
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/" className="nav-links" onClick={topOfSide}>
+              Tjänster
+            </Link>
+          </li>
+          {/* <li className="nav-item" onClick={toggleDropdown}>
             <span className="nav-links">
               Boendeinfo <i className="fas fa-caret-down" />
             </span>
@@ -105,7 +121,7 @@ function Navbar() {
                 </li>
               </ul>
             )}
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

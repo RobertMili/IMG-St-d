@@ -1,9 +1,9 @@
 :root {
   --navbar-height: 80px;
   --navbar-bg: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  --navbar-color: #fff;
+  --navbar-color: linear-gradient(90deg, #FFD700, #FFC700, #FFAA00, #FFD700);
   --hover-bg: #fff;
-  --hover-color: #242424;
+  --hover-color:  #fff;
 }
 
 .navbar {
@@ -65,6 +65,9 @@
 }
 
 .menu-icon {
+  background: var(--navbar-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   display: none;
 }
 
@@ -80,7 +83,9 @@
 }
 
 .nav-links {
-  color: var(--navbar-color);
+  background: var(--navbar-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
@@ -91,6 +96,8 @@
 .nav-links:hover {
   transition: all 0.2s ease-out;
   background: var(--hover-bg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: var(--hover-color);
 
 }
@@ -122,14 +129,18 @@
 }
 
 .dropdown-link {
-  color: var(--navbar-color);
+ background: var(--navbar-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
 }
 
 .dropdown-link:hover {
-  background: #575757;
+  background: #f6f5f5;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fas {
@@ -207,11 +218,38 @@
   
   .navbar-logo-text {
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin: 0.5rem;
   }
 
   @media screen and (max-width: 420px) {
     .navbar-logo-text {
       display: none;
     }
+  }
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFD700, #FFC700, #FFAA00, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: shine 3s linear infinite;
+}
+
+.navbar-logo-text {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  margin: 0.5rem;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
   }
 }
