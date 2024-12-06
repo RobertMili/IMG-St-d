@@ -7,6 +7,7 @@ import TextComponent from "../TextComponent/TextComponent";
 import LocalInfo from "../../components/LocalInfo/LocalInfo";
 import "./Home.css";
 import ReviewList from "../Review/ReviewList";
+import { FaFileAlt, FaTasks } from "react-icons/fa";
 
 function Home() {
   return (
@@ -15,8 +16,14 @@ function Home() {
         <div className="image-container">
           <img src="/images/cleaner.webp" alt="Cleaner" className="background-image" />
           <div className="button-container">
-            <button className="btn btn-offert">Offert</button>
-            <button className="btn btn-tjanster">Tjänster</button>
+          {/* Button for Offert */}
+          <button className="btn btn-offert">
+            <FaFileAlt style={{ marginRight: "0.5rem" }} /> Offert
+          </button>
+          {/* Button for Tjänster */}
+          <button className="btn btn-tjanster">
+            <FaTasks style={{ marginRight: "0.5rem" }} /> Tjänster
+          </button>
           </div>
         </div>
       </div>

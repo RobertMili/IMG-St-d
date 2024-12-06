@@ -10,10 +10,11 @@
 }
 
 .btn {
+  text-transform: uppercase;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  color: #fff;
-  background-color: #a3182f; /* Change this to your desired button color */
+  color: #ffc107;
+  background-color: #0d0d0d; /* Change this to your desired button color */
   border: none;
   cursor: pointer;
   border-radius: 10px; /* Adjust this value to make the corners more or less rounded */
