@@ -34,8 +34,8 @@ BRF Stjärnbildshus är en aktiv förening som strävar efter att förbättra li
         imageSrc="/images/static.png"
       /> */}
 
-      <LocalInfo />
-      <Cards />
+      {/* <LocalInfo />
+      <Cards /> */}
     </>
   );
 }
