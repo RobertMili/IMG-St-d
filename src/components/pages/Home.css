@@ -1,0 +1,97 @@
+
+
+.button-container {
+  position: absolute;
+  bottom: 10%; /* Adjust as needed */
+  left: 49%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #a3182f; /* Change this to your desired button color */
+  border: none;
+  cursor: pointer;
+  border-radius: 10px; /* Adjust this value to make the corners more or less rounded */
+}
+
+.btn:hover {
+  background-color: #ff0000; /* Change this to your desired hover color */
+}
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 55%; /* Center the image vertically */
+  left: 50%; /* Center the image horizontally */
+  width: auto; /* Maintain aspect ratio */
+  height: 100%; /* Ensure the image fills the container height */
+  transform: translate(-50%, -50%); /* Center the image exactly */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  .image-container {
+    /* Custom styles for larger screens, if needed */
+  }
+}
+
+@media (max-width: 768px) {
+  .background-image {
+    object-fit: cover; /* Maintain aspect ratio and fill container */
+  }
+
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 0.5rem;
+  }
+
+  .btn {
+    font-size: 0.9rem; /* Adjust button size for smaller screens */
+  }
+}
+
+@media (max-width: 560px) {
+  .background-image {
+    object-fit: cover; /* Ensure image fills container */
+  }
+
+  .button-container {
+    bottom: 15%; /* Move buttons slightly higher on very small screens */
+  }
+
+  .btn {
+    font-size: 0.8rem; /* Further adjust button size for small screens */
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .background-image {
+    object-fit: cover; /* Ensure image fills container */
+  }
+
+  .button-container {
+    bottom: 15%; /* Move buttons slightly higher on very small screens */
+  }
+
+  .btn {
+    font-size: 0.8rem; /* Further adjust button size for small screens */
+    padding: 0.4rem 0.8rem;
+  }
+}

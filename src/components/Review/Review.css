@@ -1,0 +1,79 @@
+.review {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px; /* Softer rounded corners */
+    background-color: #ffffff; /* Clean white background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* Limit width for better readability */
+    width: 100%; /* Make it responsive */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .review:hover {
+    transform: translateY(-5px); /* Add a hover effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  }
+  
+  .review-author {
+    font-size: 1.2rem; /* Larger font size for author */
+    font-weight: bold;
+    color: #333; /* Darker text color for contrast */
+    margin-bottom: 0.5rem;
+  }
+  
+  .review-text {
+    font-size: 1rem; /* Standard readable size */
+    line-height: 1.5; /* Improved readability */
+    color: #555; /* Neutral gray text */
+    margin-bottom: 1rem;
+  }
+  
+  .review-rating {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffcc00; /* Bright yellow for stars */
+    display: flex;
+    align-items: center;
+  }
+  
+  .review-rating::before {
+    content: "⭐"; /* Add a star emoji or use an icon library */
+    margin-right: 0.2rem;
+  }
+  
+  .review-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Spacing between reviews */
+    padding: 1rem;
+    background-color: #f4f4f4; /* Light background for the list */
+    border-radius: 10px; /* Rounded edges for the list container */
+    max-width: 800px;
+    margin: 2rem auto; /* Center the list on the page */
+  }
+  
+
+  .review-header {
+    display: flex;
+    justify-content: space-between; /* Name on the left, stars on the right */
+    align-items: center; /* Align name and stars vertically */
+    margin-bottom: 0.5rem; /* Spacing between header and text */
+  }
+  
+  .review-author {
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold;
+    color: #333; /* Darker text color */
+  }
+  
+  .author-rating {
+    display: flex; /* Arrange stars in a row */
+    gap: 0.2rem; /* Add spacing between stars */
+  }
+  
+  .star {
+    font-size: 1.2rem; /* Adjust star size */
+    color: #ffcc00; /* Gold color for stars */
+  }

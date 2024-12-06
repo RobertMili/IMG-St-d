@@ -5,24 +5,25 @@ import Footer from "../Footer/Footer";
 import VideoWithFlyInText from "../VideoWithFlyingInText/VideoWithFlyInText";
 import TextComponent from "../TextComponent/TextComponent";
 import LocalInfo from "../../components/LocalInfo/LocalInfo";
+import "./Home.css";
+import ReviewList from "../Review/ReviewList";
 
 function Home() {
   return (
     <>
-      <div className="Home">
-        <VideoWithFlyInText
-          mediaSrc="/images/img-1 (copy).jpg"
-          isVideo={false}
-          width="100%"
-          height="580px"
-          textSize="3rem"
-          textPosition="top"
-          textAlignHorizontal="left"
-          text=" "
-           paddingTop="80px"
-        />
+       <div className="Home">
+        <div className="image-container">
+          <img src="/images/cleaner.webp" alt="Cleaner" className="background-image" />
+          <div className="button-container">
+            <button className="btn btn-offert">Offert</button>
+            <button className="btn btn-tjanster">Tjänster</button>
+          </div>
+        </div>
       </div>
 
+
+      <ReviewList />
+{/* 
       <TextComponent
         title="Welcome to Brf Stjärnbildsgatan!"
         text={`Brf Stjärnbildshus nr <b>1</b> registrerades <b>1984</b> och innehåller nu <b>89</b> lägenheter med bostadsrätt. 
@@ -31,7 +32,7 @@ Fastigheterna började bebyggas <b>1967</b> som flervåningshus men gjordes om <
 BRF Stjärnbildshus är en aktiv förening som strävar efter att förbättra livskvaliteten i stadsdelen Bergsjön. Föreningen ligger nära en träningsbana, vilket ger medlemmarna möjlighet till aktiv livsstil och sport. Området är även omgiven av vacker skog och natur, vilket erbjuder fina möjligheter för promenader, cykelturer och andra utomhusaktiviteter. Dessutom ligger en sjö i närheten, perfekt för avkoppling och rekreation.
 `}
         imageSrc="/images/static.png"
-      />
+      /> */}
 
       <LocalInfo />
       <Cards />

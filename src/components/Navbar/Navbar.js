@@ -75,12 +75,12 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={topOfSide}>
-              Kontakt
+              Tjänster
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={topOfSide}>
-              Tjänster
+              Offert
             </Link>
           </li>
           {/* <li className="nav-item" onClick={toggleDropdown}>

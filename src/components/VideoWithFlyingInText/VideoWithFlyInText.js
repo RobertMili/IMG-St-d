@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import "./VideoWithFlyInText.css";
-import { AnimationOnScroll } from "react-animation-on-scroll";
-import "animate.css/animate.min.css";
 
 const MediaWithFlyInText = ({
   mediaSrc,
@@ -15,44 +13,8 @@ const MediaWithFlyInText = ({
   textPosition = "center",
   textAlignHorizontal = "center",
   objectFit = "cover", // Default value for object-fit
-  paddingTop = "0px" // Default value for padding-top
+  paddingTop = "0px", // Default value for padding-top
 }) => {
-  const [textLeft, setTextLeft] = useState('50%');
-  const [mediaHeight, setMediaHeight] = useState(height);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (textAlignHorizontal === 'left') {
-        if (window.innerWidth <= 768) {
-          setTextLeft('35%');
-        } else if (window.innerWidth <= 1100) {
-          setTextLeft('31%');
-        } else {
-          setTextLeft('31%');
-        }
-      } else if (textAlignHorizontal === 'right') {
-        setTextLeft('90%');
-      } else {
-        setTextLeft('50%');
-      }
-
-      if(window.innerWidth <= 560) {
-        setMediaHeight('350px');
-      } else if (window.innerWidth <= 768) {
-        setMediaHeight('300px');
-      } else {
-        setMediaHeight(height);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize(); // Call once to set initial size
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [textAlignHorizontal, height]);
-
   const textStyle = {
     color: textColor,
     fontSize: textSize,
@@ -62,14 +24,19 @@ const MediaWithFlyInText = ({
         : textPosition === "bottom"
         ? "90%"
         : "53%",
-    "--text-left": textLeft,
+    "--text-left":
+      textAlignHorizontal === "left"
+        ? "15%"
+        : textAlignHorizontal === "right"
+        ? "85%"
+        : "50%",
     transform: "translate(-50%, -50%)",
   };
 
   return (
     <div
       className="media-container"
-      style={{ width, height: mediaHeight, position: "relative", paddingTop }}
+      style={{ width, height, position: "relative", paddingTop }}
     >
       {isVideo ? (
         <video
@@ -88,11 +55,9 @@ const MediaWithFlyInText = ({
           style={{ width: "100%", height: "100%", objectFit }}
         />
       )}
-      <AnimationOnScroll animateIn="animate__fadeInUp">
-        <h2 className="fly-in-text" style={textStyle}>
-          {text}
-        </h2>
-      </AnimationOnScroll>
+      <h2 className="fly-in-text" style={textStyle}>
+        {text}
+      </h2>
     </div>
   );
 };
@@ -107,13 +72,13 @@ MediaWithFlyInText.propTypes = {
   textSize: PropTypes.string,
   textPosition: PropTypes.oneOf(["top", "center", "bottom"]),
   textAlignHorizontal: PropTypes.oneOf(["left", "center", "right"]),
-  objectFit: PropTypes.oneOf(["contain", "cover", "fill", "none", "scale-down"]), // Add prop type for objectFit
-  paddingTop: PropTypes.oneOfType([PropTypes.string, PropTypes.number]) // Add prop type for paddingTop
+  objectFit: PropTypes.oneOf(["contain", "cover", "fill", "none", "scale-down"]),
+  paddingTop: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 MediaWithFlyInText.defaultProps = {
-  objectFit: "cover", // Default value for object-fit
-  paddingTop: "0px" // Default value for padding-top
+  objectFit: "cover",
+  paddingTop: "0px",
 };
 
 export default MediaWithFlyInText;
