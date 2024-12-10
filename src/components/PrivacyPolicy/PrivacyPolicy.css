@@ -1,0 +1,93 @@
+/* PrivacyPolicy.css */
+
+.privacy-policy-container {
+    padding: 3rem;
+    margin: 5% auto;
+    max-width: 800px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+.privacy-policy-container h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #ffc107; /* Accent color for emphasis */
+    padding-bottom: 0.5rem;
+}
+
+.privacy-policy-container h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.privacy-policy-container p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.privacy-policy-container ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.privacy-policy-container ul li {
+    list-style: disc;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-policy-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.privacy-policy-container a:hover {
+    text-decoration: underline;
+}
+
+.privacy-policy-container .contact-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.privacy-policy-container .contact-section p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Spacing */
+footer {
+    margin-top: 3rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .privacy-policy-container {
+        padding: 1.5rem;
+        margin: 20% auto;
+    }
+
+    .privacy-policy-container h1 {
+        font-size: 2rem;
+    }
+
+    .privacy-policy-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .privacy-policy-container p, .privacy-policy-container ul {
+        font-size: 0.9rem;
+    }
+}

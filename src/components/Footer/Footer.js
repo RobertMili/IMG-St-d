@@ -23,10 +23,17 @@ function Footer() {
         <div className="footer-section">
           <h3>Snabblänkar:</h3>
           <ul>
-            <li><a href="#about">Om Oss</a></li>
+            <li><a href="/AboutOss">Om Oss</a></li>
             <li><a href="#services">Tjänster</a></li>
-            <li><a href="#reviews">Omdömen</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+            <li>
+              <a
+                href="https://www.hitta.se/img+st%C3%A4dochfastighetssk%C3%B6tsel/g%C3%B6teborg/fnrtxyzd"
+                target="_blank" // Opens the link in a new tab
+                rel="noopener noreferrer" // For security and performance
+              >
+                Omdömen
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -51,7 +58,7 @@ function Footer() {
       <div className="footer-bottom">
         <p>&copy; 2024 Img Städ&fastighetsskötsel. Alla rättigheter förbehållna.</p>
         <p>
-          <a href="/privacy-policy">Integritetspolicy</a> | <a href="/terms">Villkor</a>
+          <a href="/PrivacyPolicy">Integritetspolicy</a> | <a href="/terms">Villkor</a>
         </p>
       </div>
     </div>

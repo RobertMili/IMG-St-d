@@ -5,6 +5,9 @@ import AboutOss from './components/pages/AboutOss/AboutOss';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/pages/Home";
+import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
+import Villkor from "./components/Villkor/Villkor";
+
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -17,6 +20,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/AboutOss" element={<AboutOss />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<Villkor />} />
           </Routes>
         </main>
         <Footer />
