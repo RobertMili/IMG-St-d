@@ -11,9 +11,9 @@ const reviews = [
         link: "https://www.hitta.se/img+st%C3%A4dochfastighetssk%C3%B6tsel/g%C3%B6teborg/fnrtxyzd"
     },
     {
-        author: "Mariana Ingrid H",
-        date: "April 2024",
-        text: "Jag har höga förväntningar när det gäller städning av huset och Marina har alltid uppfyllt eller överträffat förväntningarna! Hon är pålitlig och trevlig. Kan varmt rekommendera Marina!",
+        author: "Sofia S",
+        date: "Februari 2024",
+        text: "IMG städ är Marina Grgics enskilda firma och hon är en väldigt duktig, plikttrogen och trevlig hjälp i hemmet! Hon har städat åt oss i flera år och vi trivs bra med varandra. Marina är flexibel och lyhörd och mycket hjälpsam. Rekommenderar varmt hennes tjänster.",
         rating: 5,
          link: "https://www.hitta.se/img+st%C3%A4dochfastighetssk%C3%B6tsel/g%C3%B6teborg/fnrtxyzd"
     },
