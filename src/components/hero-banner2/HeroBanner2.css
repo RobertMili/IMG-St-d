@@ -1,6 +1,6 @@
 .hero-banner2 .button-container {
     position: absolute;
-    bottom: 10%;
+    bottom: 4%;
     /* Adjust as needed */
     left: 49%;
     transform: translateX(-50%);
@@ -80,7 +80,7 @@ h1 {
 /* Focus left side on smaller screens */
 @media (max-width: 768px) {
     .hero-banner2 .button-container {
-        bottom: 10%;
+        bottom: 4%;
     }
 }
 
