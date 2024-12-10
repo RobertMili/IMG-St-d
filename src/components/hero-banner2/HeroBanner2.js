@@ -15,14 +15,27 @@ const HeroBanner2 = () => {
                 <div className="button-container">
                     <div className="hero-content">
 
-                    <h1 className="hero-heading">Professionell Städservice</h1>
+                        <h1 className="hero-heading">Professionell Städservice</h1>
 
                         <div className="hero-buttons">
-                            <button className="btn btn-offert">
-                                <FaFileAlt style={{ marginRight: "0.5rem" }} /> Offert
+                            {/* Offert Button */}
+                            <button
+                                className="btn btn-offert"
+                                onClick={() => {
+                                    document.getElementById('OffertForm').scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <FaFileAlt style={{ marginRight: '0.5rem' }} /> Offert
                             </button>
-                            <button className="btn btn-tjanster">
-                                <FaTasks style={{ marginRight: "0.5rem" }} /> Tjänster
+
+                            {/* Tjänster Button */}
+                            <button
+                                className="btn btn-tjanster"
+                                onClick={() => {
+                                    document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+                                }}
+                            >
+                                <FaTasks style={{ marginRight: '0.5rem' }} /> Tjänster
                             </button>
                         </div>
                     </div>
