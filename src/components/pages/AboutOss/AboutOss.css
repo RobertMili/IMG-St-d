@@ -1,0 +1,88 @@
+/* Main container for the About Us section */
+.om-oss-container {
+  top: 100px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f8f8f8; /* Light grey background */
+  color: #333; /* Dark grey text */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.om-oss-title {
+  font-size: 2.8rem;
+  color: #333; /* Dark color for title */
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 70px;
+}
+
+/* Section titles */
+.om-oss-container h2 {
+  font-size: 2rem;
+  color: #2f4f4f; /* Deep green for professionalism */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Paragraphs for each section */
+.om-oss-container p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* List for values and why choose us section */
+.om-oss-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.om-oss-container ul li {
+  font-size: 1.2rem;
+  color: #333; /* Dark grey text for readability */
+  margin-bottom: 20px; /* Increased spacing between list items */
+}
+
+.om-oss-container ul li strong {
+  color: #2f4f4f; /* Deep green for strong text */
+  font-weight: 600;
+}
+
+/* Space between sections */
+.om-oss-container section {
+  margin-bottom: 60px; /* Increased bottom margin for clearer separation */
+}
+
+/* Highlight color for important text */
+.om-oss-container .highlight-color {
+  color: #c8a700; /* Muted Gold for emphasis */
+}
+
+
+.om-oss-container h2, .om-oss-container ul li strong, .highlight-color {
+  color: #c8a700; /* Muted Gold */
+}
+  
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .om-oss-container {
+    padding: 20px;
+  }
+
+  .om-oss-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .om-oss-container p,
+  .om-oss-container ul li {
+    font-size: 1rem;
+  }
+
+  .om-oss-title {
+    font-size: 2rem;
+  }
+}

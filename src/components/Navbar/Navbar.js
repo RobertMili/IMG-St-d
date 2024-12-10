@@ -69,59 +69,34 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={topOfSide}>
+            <Link to="/AboutOss" className="nav-links" onClick={topOfSide}>
               Om oss
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={topOfSide}>
+            <Link
+              to="/"
+              className="nav-links"
+              onClick={() => {
+                document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+                closeMobileMenu();
+              }}
+            >
               Tjänster
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={topOfSide}>
+            <Link
+              to="/"
+              className="nav-links"
+              onClick={() => {
+                document.getElementById('OffertForm').scrollIntoView({ behavior: 'smooth' });
+                closeMobileMenu();
+              }}
+            >
               Offert
             </Link>
           </li>
-          {/* <li className="nav-item" onClick={toggleDropdown}>
-            <span className="nav-links">
-              Boendeinfo <i className="fas fa-caret-down" />
-            </span>
-            {dropdown && (
-              <ul className="dropdown-menu">
-                <li>
-                  <Link to="/rules" className="dropdown-link" onClick={handleLinkClick}>
-                    Trivselregler
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/garage" className="dropdown-link" onClick={handleLinkClick}>
-                    Garage
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/el_water" className="dropdown-link" onClick={handleLinkClick}>
-                    El & Varmvatten
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/tv" className="dropdown-link" onClick={handleLinkClick}>
-                    Tv & Internet
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/garbage" className="dropdown-link" onClick={handleLinkClick}>
-                    Soprum
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/news" className="dropdown-link" onClick={handleLinkClick}>
-                    Nyheter
-                  </Link>
-                </li>
-              </ul>
-            )}
-          </li> */}
         </ul>
       </div>
     </nav>
