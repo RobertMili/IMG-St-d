@@ -5,32 +5,20 @@ import Footer from "../Footer/Footer";
 import VideoWithFlyInText from "../VideoWithFlyingInText/VideoWithFlyInText";
 import TextComponent from "../TextComponent/TextComponent";
 import LocalInfo from "../../components/LocalInfo/LocalInfo";
-import "./Home.css";
 import ReviewList from "../Review/ReviewList";
 import { FaFileAlt, FaTasks } from "react-icons/fa";
+import ServiceHighlights from "../service/ServiceHighlights";
+import HeroBanner from "../hero-banner/HeroBanner";
+import HeroBanner2 from "../hero-banner2/HeroBanner2";
 
 function Home() {
   return (
     <>
-       <div className="Home">
-        <div className="image-container">
-          <img src="/images/cleaner.webp" alt="Cleaner" className="background-image" />
-          <div className="button-container">
-          {/* Button for Offert */}
-          <button className="btn btn-offert">
-            <FaFileAlt style={{ marginRight: "0.5rem" }} /> Offert
-          </button>
-          {/* Button for Tjänster */}
-          <button className="btn btn-tjanster">
-            <FaTasks style={{ marginRight: "0.5rem" }} /> Tjänster
-          </button>
-          </div>
-        </div>
-      </div>
 
-
+      <HeroBanner2 />
       <ReviewList />
-{/* 
+      <ServiceHighlights />
+      {/* 
       <TextComponent
         title="Welcome to Brf Stjärnbildsgatan!"
         text={`Brf Stjärnbildshus nr <b>1</b> registrerades <b>1984</b> och innehåller nu <b>89</b> lägenheter med bostadsrätt. 
