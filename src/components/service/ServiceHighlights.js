@@ -3,18 +3,8 @@ import './ServiceHighlights.css';
 
 const services = [
   {
-    title: 'Köksstädning',
-    description: 'Vi gör ditt kök skinande rent och hygieniskt.',
-    image: '/images/1.jpg', 
-  },
-  {
-    title: 'Badrumsstädning',
-    description: 'Noggrann städning för ett skinande rent badrum.',
-    image: '/images/2.jpg',
-  },
-  {
-    title: 'Vardagsrumsstädning',
-    description: 'Håll ditt vardagsrum mysigt och rent.',
+    title: 'Hemstäd',
+    description: 'Vi tar hand om hela ditt hem',
     image: '/images/3.jpg', 
   },
   {
@@ -47,6 +37,11 @@ const services = [
     title: 'Byggstädning',
     description: 'Städning efter renovering eller byggprojekt.',
     image: '/images/byggstadning.jpg', 
+  },
+  {
+    title: 'Allt inom städning',
+    description: 'Vi erbjuder skräddarsydda städtjänster för alla behov – kontakta oss för att få hjälp med just det du behöver!',
+    image: '/images/1.jpg', 
   },
   
 ];
