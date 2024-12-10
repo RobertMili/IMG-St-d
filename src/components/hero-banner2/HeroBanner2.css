@@ -86,9 +86,6 @@ h1 {
 
 @media (max-width: 560px) {
 
-    .hero-banner2 .background-image {
-        content: url("cleaner-mobile.png");
-    }
 
     .hero-banner2 .button-container {
         bottom: 4%;

@@ -8,7 +8,7 @@ const HeroBanner2 = () => {
         <div className="hero-banner2">
             <div className="image-container">
                 <img
-                    src="/images/cleaner.webp"
+                    src="/images/sweden2.webp"
                     alt="Cleaner"
                     className="background-image"
                 />
