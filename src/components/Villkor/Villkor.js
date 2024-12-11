@@ -11,7 +11,7 @@ const Villkor = () => {
 
             <h2>1. Tjänster</h2>
             <p>
-                Vi erbjuder professionella städtjänster för hem och företag. Vårt mål är att leverera högkvalitativa tjänster som uppfyller våra kunders förväntningar.
+                Vi erbjuder profeGsionella städtjänster för hem och företag. Vårt mål är att leverera högkvalitativa tjänster som uppfyller våra kunders förväntningar.
             </p>
 
             <h2>2. Bokning</h2>
