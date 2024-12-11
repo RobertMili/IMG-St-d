@@ -25,6 +25,8 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Villkor />} />
       </div>
     </Router>
   );
