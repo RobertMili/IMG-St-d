@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import "animate.css/animate.min.css";
+import { Link } from "react-router-dom";
 import { FaPhoneAlt, FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
@@ -58,7 +59,7 @@ function Footer() {
       <div className="footer-bottom">
         <p>&copy; 2024 Img Städ&fastighetsskötsel. Alla rättigheter förbehållna.</p>
         <p>
-          <a href="/PrivacyPolicy">Integritetspolicy</a> | <a href="/terms">Villkor</a>
+        <Link to="/PrivacyPolicy">Integritetspolicy</Link> | <Link to="/terms">Villkor</Link>
         </p>
       </div>
     </div>
