@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Villkor from "./components/Villkor/Villkor";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <Router>
+       <ScrollToTop />
       <div className="app-container">
         <Navbar />
         <main className="main-content">
