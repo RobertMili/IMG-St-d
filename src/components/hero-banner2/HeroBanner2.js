@@ -16,6 +16,15 @@ const HeroBanner2 = () => {
                     <div className="hero-content">
 
                         <h1 className="hero-heading">Professionell Städservice</h1>
+                        <section className="offer">
+                                <h2 className="offer-title">
+                                    Exklusivt Erbjudande på Hemstädning
+                                </h2>
+                            <p className="offer-text">
+                                Upplev förstklassig hemstädning för endast
+                                <span className="offer-price"> 99 SEK</span>
+                            </p>
+                        </section>>
 
                         <div className="hero-buttons">
                             {/* Offert Button */}
@@ -25,7 +34,7 @@ const HeroBanner2 = () => {
                                     document.getElementById('OffertForm').scrollIntoView({ behavior: 'smooth' });
                                 }}
                             >
-                                <FaFileAlt style={{ marginRight: '0.5rem' }} /> Offert
+                                <FaFileAlt style={{ marginRight: '0.5rem' }} /> Boka Nu
                             </button>
 
                             {/* Tjänster Button */}
