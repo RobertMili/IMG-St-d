@@ -24,7 +24,7 @@ const HeroBanner2 = () => {
                                 Upplev förstklassig hemstädning för endast
                                 <span className="offer-price"> 99 SEK</span>
                             </p>
-                        </section>>
+                        </section>
 
                         <div className="hero-buttons">
                             {/* Offert Button */}
