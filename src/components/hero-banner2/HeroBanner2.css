@@ -110,9 +110,16 @@ h1 {
 }
 
 .offer-title {
-    color:  #d32f2f;
+    color: #0d0d0d; /* Black */
     font-size: 1.8rem;
     font-weight: bold;
+}
+
+.offer-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffc107; /* Gold */
+    margin-left: 5px;
 }
 
 .offer-text {
@@ -121,12 +128,7 @@ h1 {
     margin: 15px 0;
 }
 
-.offer-price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #d32f2f;
-    margin-left: 5px;
-}
+
 
 .offer-btn {
     background: #ffc107;

@@ -27,4 +27,24 @@
     color: #FFAA00; /* Slightly darker gold for stars */
   }
   
-  
+  .review-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+/* Responsive: 2 columns on medium screens, 1 on small */
+@media (max-width: 900px) {
+    .review-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .review-list {
+        grid-template-columns: 1fr;
+    }
+}
