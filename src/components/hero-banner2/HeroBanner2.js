@@ -16,15 +16,7 @@ const HeroBanner2 = () => {
                     <div className="hero-content">
 
                         <h1 className="hero-heading">Professionell Städservice</h1>
-                        <section className="offer">
-                            <h1 className="offer-title">
-                                Exklusivt erbjudande på <span className="offer-price">Provstädning</span>
-                            </h1>
-                            <p className="offer-text">
-                                Provstädning för endast
-                                <span className="offer-price"> 99 SEK</span> efter RUT-avdrag!
-                            </p>
-                        </section>
+                    
 
                         <div className="hero-buttons">
                             {/* Offert Button */}
